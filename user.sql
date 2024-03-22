@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `login`(
     `password` VARCHAR(30)
 );
 
-INSERT INTO `login` (`username`, `password`) VALUES ('admin', 'admin111');
+INSERT INTO `login` (`username`, `password`) VALUES ('Dhiraj', 'Dhiraj11');
