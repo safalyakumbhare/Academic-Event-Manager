@@ -1,6 +1,7 @@
 <?php
 
-include ("connection.php");
+// include ("connection.php");
+    $conn = mysqli_connect("localhost","root","","database1");
     if(isset($_POST['submit'])){
         $username = $_POST['user'];
         $password = $_POST['pass'];
@@ -12,13 +13,12 @@ include ("connection.php");
         $row = mysqli_fetch_array( $result ,MYSQLI_ASSOC);
         $count = mysqli_num_rows($result);
         if($count == 1){
-            include("welcome.php");
+            header("Location:welcome.php");
         }  
         else{
-            echo `<script>
-            window.location.href = "index.php";
-            alert('Password incorrect');
-            </script>`;
+            echo '<script>
+            alert("Password incorrect");
+            </script>';
         }
     }
    

@@ -34,7 +34,7 @@ include ("connection.php")
                     <input type="password" id="pass" name="pass" required>
                 </div>
                 <div class="btn-group">
-                    <input type="submit" class="btn login" id="btn" value="Login">
+                    <input type="submit" class="btn login" id="btn" name="submit" value="Login">
                     <button type="reset" class="btn reset">Reset</button>
                     <button type="button" class="btn cancel">Cancel</button>
                 </div>
