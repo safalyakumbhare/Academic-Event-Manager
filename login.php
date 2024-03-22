@@ -1,7 +1,6 @@
 <?php
 
-// include ("connection.php");
-    $conn = mysqli_connect("localhost","root","","database1");
+include ("connection.php");
     if(isset($_POST['submit'])){
         $username = $_POST['user'];
         $password = $_POST['pass'];
