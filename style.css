@@ -10,11 +10,14 @@ body {
 }
 
 .login-container {
+  height: 40vh;
+  width: 20vw;
   color: #fff;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  backdrop-filter: blur(20px);
   position: absolute;
   background: transparent;
 }
@@ -96,14 +99,11 @@ h2 {
 .page {
   height: 100vh;
   width: 100vw;
-  background-image: url('img.jpg');
+  background-image: url("img.jpg");
   background-size: cover;
 
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* Blur effect */
-  filter: blur(8px); /* Adjust the blur radius as needed */
 }
