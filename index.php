@@ -1,46 +1,162 @@
-<?php
-include ("connection.php")
-
-    ?>
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Event Manager - Login</title>
+    <title>Acadmic Event</title>
     <link rel="stylesheet" href="style.css">
-</head>
+    <!-- Fontawesome Link for Icons -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h2 class="logo"><a href="#">Academic Event Management</a></h2>
+        <input type="checkbox" id="menu-toggler">
+        <label for="menu-toggler" id="hamburger-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </label>
+        
+      </nav>
+    </header>
 
-<body>
-    <div class="page">
-        <div class="login-container">
-            <!-- <h2>Event Manager</h2> -->
-            <form id="login-form" action="login.php" name="form" method="POST">
-                <div class="form-group">
-                    <label for="role">Who are you?</label>
-                    <select id="role" name="role">
-                        <option value="Principal">Principal</option>
-                        <option value="HOD">HOD</option>
-                        <option value="Faculty">Faculty</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="user">User ID</label>
-                    <input type="text" id="user" name="user" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="pass" name="pass" required>
-                </div>
-                <div class="btn-group">
-                    <input type="submit" class="btn login" id="btn" name="submit" value="Login">
-                    <button type="reset" class="btn reset" name="reset">Reset</button>
-
-                </div>
-            </form>
+    <section class="homepage" id="home">
+      <div class="content">
+        <div class="text">
+          <h1>Academic Event Management </h1>
+        
         </div>
-    </div>
-</body>
+        <a href="loginpage.php">Get Started</a>
+      </div>
+    </section>
 
+    <section class="services" id="services">
+      <h2>Project Developers</h2>
+      
+      <ul class="cards">
+        <li class="card">
+          <img src="images/tents.jpg" alt="img">
+          <h3>Bhuvan Gajghat</h3>
+          
+        </li>
+        <li class="card">
+          <img src="pravin.png" alt="img">
+          <h3>Pravin Pradkar</h3>
+          
+        </li>
+        <li class="card">
+          <img src="safa.png" alt="img">
+          <h3>Safalya Kumbare</h3>
+         
+        </li>
+        <li class="card">
+          <img src="dha.png" alt="img">
+          <h3>Dhanajay Kawale</h3>
+         
+        </li>
+       
+      </ul>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <h2>Events in Acadmic</h2>
+      
+      <ul class="cards">
+        <li class="card">
+          <img src="clgeevent1.avif" alt="img">
+          <h3>Atrangi Events</h3>
+         
+        </li>
+        <li class="card">
+          <img src="antargni-11.avif" alt="img">
+          <h3>Lakeside Camping</h3>
+         
+        </li>
+        <li class="card">
+          <img src="antargni-12.avif" alt="img">
+          <h3>Beach Camping</h3>
+          
+        </li>
+        <li class="card">
+          <img src="antargni-13.avif" alt="img">
+          <h3>Forest Exploration</h3>
+          
+        </li>
+        <li class="card">
+          <img src="antargni-4.avif" alt="img">
+          <h3>RV Camping</h3>
+          
+        </li>
+        <li class="card">
+          <img src="antargni-8.avif" alt="img">
+          <h3>Desert Camping</h3>
+          
+        </li>
+      </ul>
+    </section>
+
+    <section class="about" id="about">
+      <h2>About Us</h2>
+      <p>Discover our story in providing camping services.</p>
+      <div class="row company-info">
+        <h3>Our Story</h3>
+      <p> academic events are more than just gatherings; they're milestones in our journey of knowledge and growth. From engaging lectures to dynamic seminars, our events foster intellectual curiosity and collaboration among students, faculty, and experts alike. We take pride in curating enriching experiences that inspire learning beyond the classroom, shaping the academic landscape of tomorrow with innovation and excellence.</p>
+      </div>
+      <div class="row mission-vision">
+        <h3>Our Mission</h3>
+        <p>our mission is to champion academic excellence through a diverse array of events that enrich learning and foster collaboration. These events serve as catalysts for intellectual exploration, igniting passions and nurturing talents. We're dedicated to cultivating a dynamic educational environment where every participant is empowered to thrive and contribute positively to society</p>
+        <h3>Our Vision</h3>
+        <p>In envisioning our academic landscape, we strive to create a tapestry of vibrant events at [College Name]. These events serve as pillars of our vision, enriching learning experiences and fostering a culture of innovation and inclusivity. Our aim is to inspire, challenge, and empower individuals to embrace lifelong learning and make meaningful contributions to their communities and beyond</p>
+      </div>
+      <div class="row team">
+        <h3>Our Team</h3>
+        <ul>
+          <li>Bruce Wayne - Founder and CEO</li>
+          <li>Billy butcher- Gear Specialist</li>
+          <li>Jhon wick - Customer Representative</li>
+          <li>Karl - Operations Manager</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Contact Us</h2>
+      <p>Reach out to us for any inquiries or feedback.</p>
+      <div class="row">
+        <div class="col information">
+          <div class="contact-details">
+            <p><i class="fas fa-map-marker-alt"></i> 123 Campsite Avenue, Wilderness, CA 98765</p>
+            <p><i class="fas fa-envelope"></i> info@campinggearexperts.com</p>
+            <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+            <p><i class="fas fa-clock"></i> Monday - Friday: 9:00 AM - 5:00 PM</p>
+            <p><i class="fas fa-clock"></i> Saturday: 10:00 AM - 3:00 PM</p>
+            <p><i class="fas fa-clock"></i> Sunday: Closed</p>
+            <p><i class="fas fa-globe"></i> www.codingenpalweb.com</p>
+          </div>          
+        </div>
+        <div class="col form">
+          <form>
+            <input type="text" placeholder="Name*" required>
+            <input type="email" placeholder="Email*" required>
+            <textarea placeholder="Message*" required></textarea>
+            <button id="submit" type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <span>Copyright © 2023 All Rights Reserved</span>
+        <span class="link">
+            <a href="#">Home</a>
+            <a href="#contact">Contact</a>
+        </span>
+      </div>
+    </footer>
+
+  </body>
 </html>
