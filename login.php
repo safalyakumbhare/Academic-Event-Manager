@@ -20,6 +20,8 @@ include ("connection.php");
             </script>';
         }
     }
-   
+    if($_POST=['cancel']){
+        header("Location:dashboard.php");
+    }
 
 ?>
