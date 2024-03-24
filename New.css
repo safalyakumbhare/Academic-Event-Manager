@@ -6,7 +6,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f2f2f2;
+  background-color: aliceblue;
 }
 
 .container {
@@ -56,18 +56,29 @@ h1 {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: 0.5s ease-in-out;
 }
 
 .registration-form button[type="submit"]:hover {
-  background-color: #3498db;
+  color: dodgerblue;
+  background-color: #fff;
+  box-shadow: 1px 1px 20px 10px dodgerblue;
 }
 
 .registration-form button[type="button"].cancel-button {
-  width: 22%;
-  background-color: #f04141;
+  display: block;
+  width: 48%;
+  background-color: #ea2a2a;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
 }
 
 .registration-form button[type="button"].cancel-button:hover {
-  background-color: #ea2a2a;
+  background-color: #fff;
+  color: #ea2a2a;
+  box-shadow: 1px 1px 20px 10px #ea2a2a;
 }
