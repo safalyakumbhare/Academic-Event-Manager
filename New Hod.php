@@ -1,5 +1,5 @@
 <?php
- include("Adminhome.php")
+ include("header.php")
 
 ?>
 <!DOCTYPE html>

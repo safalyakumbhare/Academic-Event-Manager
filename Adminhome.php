@@ -23,15 +23,20 @@ include ("header.php");
     }
 
     .container {
-
-
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 
     .box1,
     .box2,
     .box3 {
-        height: 25vh;
-        width: 35vw;
+        height: 35vh;
+        width: 25vw;
+        margin: 1vw;
+        display:flex;
+        align-items: center;
+        justify-content: center;
         background-color: blue;
     }
 </style>
@@ -39,13 +44,10 @@ include ("header.php");
 <body>
     <div class="content">
         <div class="container">
-            <a href="">
-                <div class="box1"></div>
-            </a><a href="">
-                <div class="box2"></div>
-            </a><a href="">
-                <div class="box3"></div>
-            </a>
+            <a href="New Hod.php"><div class="box1"><h2>New Hod</h2></div></a>
+            <a href=""><div class="box2"><h2>New Faculty</h2></div></a>
+            <a href=""><div class="box3"><h2>Show Events</h2></div></a>
+            
         </div>
     </div>
 </body>
