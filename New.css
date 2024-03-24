@@ -47,7 +47,7 @@ h1 {
   margin-bottom: 10px;
 }
 
-.registration-form button[type="submit"] {
+.registration-form input[type="submit"] {
   display: block;
   width: 48%;
   background-color: dodgerblue;
@@ -59,7 +59,7 @@ h1 {
   transition: 0.5s ease-in-out;
 }
 
-.registration-form button[type="submit"]:hover {
+.registration-form input[type="submit"]:hover {
   color: dodgerblue;
   background-color: #fff;
   box-shadow: 1px 1px 20px 10px dodgerblue;
