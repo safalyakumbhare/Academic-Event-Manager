@@ -35,7 +35,7 @@ include ("connection.php")
                 </div>
                 <div class="btn-group">
                     <input type="submit" class="btn login" id="btn" name="submit" value="Login">
-                    <button type="reset" class="btn reset" name="reset">Reset</button>
+                    <button type="reset" class="btn reset" name="reset" id="btn">Reset</button>
 
                 </div>
             </form>
