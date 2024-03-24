@@ -1,6 +1,6 @@
 <?php
- include("header.php")
 
+  include("header.php")
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,9 +12,9 @@
 </head>
 <body>
   <div class="container">
-    <h1>HoD Registration</h1>
+    <h1>New Faculty regestration</h1>
     <form class="registration-form">
-      <label for="hodName">Name of HoD:</label>
+      <label for="hodName">Name of Faculty:</label>
       <input type="text" id="hodName" name="hodName">
 
       <label for="department">Department:</label>

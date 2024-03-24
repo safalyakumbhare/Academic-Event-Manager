@@ -45,7 +45,7 @@ include ("header.php");
     <div class="content">
         <div class="container">
             <a href="New Hod.php"><div class="box1"><h2>New Hod</h2></div></a>
-            <a href=""><div class="box2"><h2>New Faculty</h2></div></a>
+            <a href="New Faculty.php"><div class="box2"><h2>New Faculty</h2></div></a>
             <a href=""><div class="box3"><h2>Show Events</h2></div></a>
             
         </div>
