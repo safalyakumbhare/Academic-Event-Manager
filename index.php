@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Acadmic Event</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Fontawesome Link for Icons -->
+  <!-- Fontawesome Link for Icons -->images/
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -40,22 +40,22 @@
 
     <ul class="cards">
       <li class="card">
-        <img src="images/tents.jpg" alt="img">
+        <img src="image/tents.jpg" alt="img">
         <h3>Bhuvan Gajghat</h3>
 
       </li>
       <li class="card">
-        <img src="pravin.png" alt="img">
+        <img src="image/pravin.png" alt="img">
         <h3>Pravin Paradkar</h3>
 
       </li>
       <li class="card">
-        <img src="safa.png" alt="img">
+        <img src="image/safa.png" alt="img">
         <h3>Safalya Kumbhare</h3>
 
       </li>
       <li class="card">
-        <img src="dha.png" alt="img">
+        <img src="image/dha.png" alt="img">
         <h3>Dhananjay Kawale</h3>
 
       </li>
@@ -68,32 +68,32 @@
 
     <ul class="cards">
       <li class="card">
-        <img src="clgeevent1.avif" alt="img">
+        <img src="image/clgeevent1.avif" alt="img">
         <h3>Antaragni Events</h3>
 
       </li>
       <li class="card">
-        <img src="antargni-11.avif" alt="img">
+        <img src="image/antargni-11.avif" alt="img">
         <h3>Flash Mop</h3>
 
       </li>
       <li class="card">
-        <img src="antargni-12.avif" alt="img">
+        <img src="image/antargni-12.avif" alt="img">
         <h3>Stall</h3>
 
       </li>
       <li class="card">
-        <img src="antargni-13.avif" alt="img">
+        <img src="image/antargni-13.avif" alt="img">
         <h3>Indoor Sports</h3>
 
       </li>
       <li class="card">
-        <img src="antargni-4.avif" alt="img">
+        <img src="image/antargni-4.avif" alt="img">
         <h3>Award Show</h3>
 
       </li>
       <li class="card">
-        <img src="antargni-8.avif" alt="img">
+        <img src="image/antargni-8.avif" alt="img">
         <h3>Cultural Event</h3>
 
       </li>
