@@ -55,13 +55,13 @@ include ("header.php");
             <a href="New Hod.php">
                 <div class="box1">
                     <h2>New Hod</h2>
-                    <p>Get Registered Your New Hod</p>
+                    <p>Get Register Your New Hod</p>
                 </div>
             </a>
             <a href="New Faculty.php">
                 <div class="box2">
                     <h2>New Faculty</h2>
-                    <p>Get Registered Your New Hod</p>
+                    <p>Get RegisterYour New Faculty</p>
                 </div>
             </a>
             <a href="">

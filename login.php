@@ -17,6 +17,7 @@ if (isset ($_POST['submit'])) {
         echo '<script>
             alert("Password incorrect");
             </script>';
+        include("loginpage.php");
     }
 }
 
