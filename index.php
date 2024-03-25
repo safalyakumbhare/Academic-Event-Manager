@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Acadmic Event</title>
+  <title>Academic Event Manager</title>
   <!-- <link rel="stylesheet" href="style.css"> -->
   <!-- Fontawesome Link for Icons -->
   <link rel="stylesheet" href="index.css">

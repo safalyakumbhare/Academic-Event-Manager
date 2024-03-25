@@ -12,10 +12,10 @@
 </head>
 <body>
   <div class="container">
-    <h1>HoD Registration</h1>
+    <h1>New HoD Registration</h1>
     <form class="registration-form" action="Addhod.php" method="POST" >
       <label for="hodName">Name of HoD:</label>
-      <input type="text" id="hodName" name="hodName">
+      <input type="text" id="Name" name="Name">
 
       <label for="department">Department:</label>
       <input type="text" id="department" name="department">
@@ -27,7 +27,7 @@
       <input type="password" id="password" name="password">
 
       <input type="submit" name="submit" value="Register">
-      <button type="button" class="cancel-button">Cancel</button>
+      <button type="button" class="cancel-button" name="cancel">Cancel</button>
     </form>
   </div>
 </body>
