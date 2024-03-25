@@ -13,18 +13,18 @@
 <body>
   <div class="container">
     <h1>New Faculty Registration</h1>
-    <form class="registration-form"  action="Addhod.php" method="POST" >
+    <form class="registration-form"  action="AddFaculty.php" method="POST" >
       <label for="hodName">Name of Faculty:</label>
-      <input type="text" id="Name" name="Name">
+      <input type="text" id="Name" name="Name" required>
 
       <label for="department">Department:</label>
-      <input type="text" id="department" name="department">
+      <input type="text" id="department" name="department" required>
 
       <label for="userId">User ID:</label>
-      <input type="text" id="userId" name="userId">
+      <input type="text" id="userId" name="userId" required>
 
       <label for="password">Password:</label>
-      <input type="password" id="password" name="password">
+      <input type="password" id="password" name="password" required>
 
       <input type="submit" name="submit" value="Register">
       <button type="button" class="cancel-button">Cancel</button>

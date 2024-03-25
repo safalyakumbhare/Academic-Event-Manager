@@ -7,7 +7,7 @@ $username = $_POST['userId'];
 $password = $_POST['password'];
 
 
-$sql = "INSERT INTO login VALUES ('$name','$dept','$username','$password')";
+$sql = "INSERT INTO login VALUES ('Hod','$name','$dept','$username','$password')";
 
 $result = mysqli_query($conn, $sql);
 
