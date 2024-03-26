@@ -12,7 +12,7 @@
     <div class="Task">
         <nav>
             <Ul class="heading">
-                <Li class="head">Acadmic event managment</Li>
+                <Li class="head">Academic event managment</Li>
             </Ul>
             <ul>
                 <li>Welcome Admin</li>
