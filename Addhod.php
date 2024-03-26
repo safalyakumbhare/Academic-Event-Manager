@@ -12,7 +12,7 @@ $sql = "INSERT INTO login VALUES ('Hod','$name','$dept','$username','$password')
 $result = mysqli_query($conn, $sql);
 
 if ($result == 1) {
-    echo "<script>alert('$name Added Successfully')</script>";
+    echo "<script>alert('New Hod $name Added Successfully')</script>";
     include ("AdminHome.php");
 
 } else {

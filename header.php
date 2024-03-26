@@ -20,33 +20,33 @@
             <li><a href="#">HoD login</a></li>
             <li><a href="#">Faculty</a></li> -->
 
-                <!-- <img src="icons8-menu-50.png" class="dot" onclick="toggleMenu()"> -->
+                <img src="icons8-menu-50.png" class="dot" onclick="toggleMenu()">
             </ul>
             <div class="sub-menu-wrap" id="submenu">
                 <div class="sub-menu">
                     <div class="user info">
 
                     </div>
-                    <a href="#" class="menu-link">
+                    <a href="loginpage.php" class="menu-link">
                         <img src="icons8-login-50.png">
-                        <P>Login</P>
-                        <span>></span>
+                        <P>Log Out</P>
+                        <!-- <span>></span> -->
                     </a>
-                    <a href="#" class="menu-link">
+                    <!-- <a href="#" class="menu-link">
                         <img src="icons8-services-30.png">
                         <P>Services</P>
                         <span>></span>
-                    </a>
-                    <a href="#" class="menu-link">
+                    </a> -->
+                    <!-- <a href="#" class="menu-link">
                         <img src="icons8-about-24.png">
                         <P>About us</P>
                         <span>></span>
-                    </a>
-                    <a href="#" class="menu-link">
+                    </a> -->
+                    <!-- <a href="#" class="menu-link">
                         <img src="icons8-phone-50.png">
                         <P>Contact us</P>
                         <span>></span>
-                    </a>
+                    </a> -->
                 </div>
             </div>
 

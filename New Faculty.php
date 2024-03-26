@@ -1,19 +1,21 @@
 <?php
 
-  include("header.php")
-?>
+include ("header.php")
+  ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HoD Registration</title>
   <link rel="stylesheet" href="New.css">
 </head>
+
 <body>
   <div class="container">
     <h1>New Faculty Registration</h1>
-    <form class="registration-form"  action="AddFaculty.php" method="POST" >
+    <form class="registration-form" action="AddFaculty.php" method="POST">
       <label for="hodName">Name of Faculty:</label>
       <input type="text" id="Name" name="Name" required>
 
@@ -31,4 +33,5 @@
     </form>
   </div>
 </body>
+
 </html>
