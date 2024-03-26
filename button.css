@@ -47,12 +47,14 @@
   color: #000000;
   font-size: 20px;
   font-weight: bold;
+  transition: 0.3s ease-in-out;
 }
 
 .content p {
   color: #000000;
   font-size: 16px;
   margin-top: 10px;
+  transition: 0.3s ease-in-out;
 }
 
 .box:nth-child(1) {
@@ -76,15 +78,13 @@
 }
 
 .bttn:hover .box h2 {
-  /* color: whitesmoke; */
-  text-shadow: -2px 3px 3px rgb(9, 45, 130);
-  
+  color: whitesmoke;
+  text-shadow: 0px 3px 10px rgb(9, 45, 130);
 }
 
 .bttn:hover .box p {
-  /* color: whitesmoke; */
-  text-shadow: -2px 3px 3px rgb(9, 45, 130);
-  
+  /* color: blueviolet; */
+  text-shadow: 0px 3px 10px rgb(9, 45, 130);
 }
 
 .bttn:focus {
