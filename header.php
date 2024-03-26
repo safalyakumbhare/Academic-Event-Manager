@@ -1,6 +1,6 @@
 <?php
-    include('login.php');
-    $name = $_SESSION['name'];
+include ('login.php');
+$name = $_SESSION['name'];
 
 ?>
 <!DOCTYPE html>
@@ -20,7 +20,9 @@
                 <Li class="head">Academic event managment</Li>
             </Ul>
             <ul>
-                <li>Welcome <?php echo "$name";?></li>
+                <li>Welcome
+                    <?php echo "$name"; ?>
+                </li>
                 <!-- <li><a href="#">Principal</a></li>
             <li><a href="#">HoD login</a></li>
             <li><a href="#">Faculty</a></li> -->
@@ -35,7 +37,7 @@
                     <a href="loginpage.php" class="menu-link">
                         <img src="icons8-login-50.png">
                         <P>Log Out</P>
-                        <!-- <span>></span> -->
+                        <span>></span>
                     </a>
                     <!-- <a href="#" class="menu-link">
                         <img src="icons8-services-30.png">
