@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include ("connection.php");
 
 if (isset ($_POST['submit'])) {
@@ -22,7 +22,7 @@ if (isset ($_POST['submit'])) {
     }
     $username = $_POST['user'];
     $password = $_POST['pass'];
-
+    $_SESSION['name']=$username;
 
 
     $sql = "SELECT * FROM login WHERE desig = '$desig' AND username = '$username' AND password='$password';";

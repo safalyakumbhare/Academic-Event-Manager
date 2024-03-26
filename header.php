@@ -1,3 +1,8 @@
+<?php
+    include('login.php');
+    $name = $_SESSION['name'];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +20,7 @@
                 <Li class="head">Academic event managment</Li>
             </Ul>
             <ul>
-                <li>Welcome Admin</li>
+                <li>Welcome <?php echo "$name";?></li>
                 <!-- <li><a href="#">Principal</a></li>
             <li><a href="#">HoD login</a></li>
             <li><a href="#">Faculty</a></li> -->
