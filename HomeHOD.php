@@ -24,7 +24,7 @@ include ("header.php");
 
     
     <button class="bttn">
-      <a href="New Faculty.php">
+      <a href="New Faculty for HOD.php">
         <div class="box hover-box" id="new-faculty">
           <div class="content">
 
