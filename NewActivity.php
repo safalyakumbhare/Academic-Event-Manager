@@ -131,7 +131,14 @@ include ("header.php");
                     <input type="checkbox" id="video" name="requirements" value="Video" />
                 </div>
             </fieldset>
+
+            <label for="budget">Budget :
+            </label>
+
+            
             <input type="submit" id="submit" name="submit" />
+
+            
         </form>
     </div>
 </body>

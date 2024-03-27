@@ -167,10 +167,10 @@
 
       <div>
         <span>Copyright © 2023 All Rights Reserved</span>
-        <span class="link">
-          <a href="#">Home</a>
+        <!-- <span class="link">
+          <a href="#home">Home</a>
           <a href="#contact">Contact</a>
-        </span>
+        </span> -->
       </div>
     </footer>
   </div>
