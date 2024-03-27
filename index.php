@@ -43,7 +43,7 @@
 
       <ul class="cards">
         <li class="card">
-          <img src="image/tents.jpg" alt="img">
+          <img src="image/bhu.jpg" alt="img">
           <h3>Bhuvan Gajghat</h3>
 
         </li>
