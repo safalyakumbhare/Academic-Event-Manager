@@ -12,7 +12,7 @@ if (isset ($_POST['send'])) {
     $result = mysqli_query($conn, $sql);
 
     if ($result == 1) {
-        echo "<script>alert('$name Added Successfully')</script>";
+        echo "<script>alert('New Faculty $name Added Successfully')</script>";
         include ("HomeAdmin.php");
 
     } else {

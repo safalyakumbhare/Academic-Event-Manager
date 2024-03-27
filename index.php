@@ -130,8 +130,8 @@
         <h3>Our Team</h3>
         <ul>
           <li>Bhuvan Gajghat - Frontend Developer</li>
-          <li>Pravin Paradkar - Logical Developer</li>
-          <li>Safalya Kumbhare - Backend Developer</li>
+          <li>Pravin Paradkar - Frontend Developer</li>
+          <li>Safalya Kumbhare - Full Stack Developer</li>
           <li>Dhananjay Kawale</li>
         </ul>
       </div>
