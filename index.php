@@ -164,25 +164,31 @@
     </section>
 
     <footer>
+
+      <div>
+        <span>Copyright © 2023 All Rights Reserved</span>
+        <span class="link">
+          <a href="#">Home</a>
+          <a href="#contact">Contact</a>
+        </span>
+      </div>
+    </footer>
   </div>
-  <div>
-    <span>Copyright © 2023 All Rights Reserved</span>
-    <span class="link">
-      <a href="#">Home</a>
-      <a href="#contact">Contact</a>
-    </span>
-  </div>
-  </footer>
   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
     const scroll = new LocomotiveScroll({
-  el: document.querySelector("#main"),
-  smooth: true,
-});
+      el: document.querySelector("#main"),
+      smooth: true,
+    });
 
-  </script>
+  </script>.
+
 </body>
 
 </html>
