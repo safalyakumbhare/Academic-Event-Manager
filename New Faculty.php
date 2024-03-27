@@ -28,7 +28,7 @@ include ("header.php")
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required>
 
-      <input type="submit" name="submit" value="Register">
+      <input type="submit" name="send" value="Register">
       <button type="button" class="cancel-button">Cancel</button>
     </form>
   </div>

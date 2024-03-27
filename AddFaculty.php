@@ -1,6 +1,6 @@
 <?php
 include ("connection.php");
-if (isset ($_POST['submit'])) {
+if (isset ($_POST['send'])) {
     $name = $_POST['Name'];
     $dept = $_POST['department'];
     $username = $_POST['userId'];
@@ -13,7 +13,7 @@ if (isset ($_POST['submit'])) {
 
     if ($result == 1) {
         echo "<script>alert('$name Added Successfully')</script>";
-        include ("AdminHome.php");
+        include ("HomeAdmin.php");
 
     } else {
         echo "Error inserting data: " . mysqli_error($conn);
