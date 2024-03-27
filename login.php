@@ -2,7 +2,7 @@
 session_start();
 include ("connection.php");
 
-if (isset ($_POST['submit'])) {
+if (isset($_POST['submit'])) {
     $role = $_POST["role"];
     switch ($role) {
         case "Principal":
@@ -22,7 +22,7 @@ if (isset ($_POST['submit'])) {
     }
     $username = $_POST['user'];
     $password = $_POST['pass'];
-    $_SESSION['name']=$username;
+    $_SESSION['name'] = $username;
 
 
     $sql = "SELECT * FROM login WHERE desig = '$desig' AND username = '$username' AND password='$password';";
@@ -33,13 +33,13 @@ if (isset ($_POST['submit'])) {
     if ($count == 1) {
         switch ($role) {
             case 'Principal':
-                header("Location: AdminHome.php");
+                header("Location: HomeAdmin.php");
                 break;
             case 'HOD':
-                header("Location: HODHome.php");
+                header("Location: HomeHOD.php");
                 break;
             case 'Faculty':
-                header("Location: FacultyHome.php");
+                header("Location: HomeFaculty.php");
                 break;
         }
     } else {

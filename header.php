@@ -17,7 +17,7 @@ $name = $_SESSION['name'];
     <div class="Task">
         <nav>
             <Ul class="heading">
-                <Li class="head">Academic event managment</Li>
+                <a href="index.php"><Li class="head">Academic event managment</Li></a>
             </Ul>
             <ul>
                 <li>Welcome

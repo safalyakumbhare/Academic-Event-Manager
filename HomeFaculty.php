@@ -22,9 +22,9 @@ include ("header.php");
     </nav> -->
   <div class="container">
 
-    
+
     <button class="bttn">
-      <a href="New Faculty.php">
+      <a href="NewActivity.php">
         <div class="box hover-box" id="new-faculty">
           <div class="content">
 
@@ -36,13 +36,15 @@ include ("header.php");
       </a>
     </button>
     <button class="bttn">
-      <div class="box hover-box" id="show-events">
-        <div class="content">
-          <h2>Report of Activity</h2>
-          <p>See Status and Upcoming Events Report</p>
+      <a href="#">
+        <div class="box hover-box" id="show-events">
+          <div class="content">
+            <h2>Report of Activity</h2>
+            <p>See Status and Upcoming Events Report</p>
 
+          </div>
         </div>
-      </div>
+      </a>
     </button>
   </div>
 </body>
