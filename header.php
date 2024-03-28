@@ -1,6 +1,10 @@
 <?php
-include ('login.php');
-$name = $_SESSION['name'];
+require_once ('connection.php');
+include ("login.php");
+$user = $_SESSION['name'];
+$result = mysqli_query($conn, "SELECT `name` FROM `login` WHERE username = '$user'");
+$res = mysqli_fetch_assoc($result);
+$name = $res
 
 ?>
 <!DOCTYPE html>
@@ -23,9 +27,8 @@ $name = $_SESSION['name'];
                 </a>
             </Ul>
             <ul>
-                <li>Welcome</li>
-                <li style="text-transform:uppercase;">
-                    <?php echo "$name"; ?>
+                <li>Welcome
+                    <?php echo implode($name); ?>
                 </li>
                 <!-- <li><a href="#">Principal</a></li>
             <li><a href="#">HoD login</a></li>
