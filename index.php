@@ -67,7 +67,7 @@
     </section>
 
     <section class="portfolio" id="portfolio">
-      <h2>Events in Acadmic</h2>
+      <h2>Events in Academic</h2>
 
       <ul class="cards">
         <li class="card">

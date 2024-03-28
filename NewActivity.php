@@ -83,6 +83,13 @@ include ("header.php");
         fieldset {
             width: 30vw;
         }
+
+        #activitydes {
+            width: 100%;
+            height: 10vw;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
     </style>
 </head>
 
@@ -93,6 +100,10 @@ include ("header.php");
             <div class="form-group">
                 <label for="activityName">Name of Activity:</label>
                 <input type="text" id="activityName" name="activityName" required />
+            </div>
+            <div class="form-group">
+                <label for="activityName">Name of Activity:</label>
+                <textarea id="activitydes" name="activitydes" required></textarea>
             </div>
             <div class="form-group">
                 <label for="startDate">Start Date:</label>
@@ -135,10 +146,10 @@ include ("header.php");
             <label for="budget">Budget :
             </label>
 
-            
+
             <input type="submit" id="submit" name="submit" />
 
-            
+
         </form>
     </div>
 </body>
