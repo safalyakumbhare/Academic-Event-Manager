@@ -96,7 +96,7 @@ include ("header.php");
 <body>
     <div class="container">
         <h2>Activity Proposal Form</h2>
-        <form id="activityForm">
+        <form id="activityForm" action="AddNewActivity.php" method="POST">
             <div class="form-group">
                 <label for="activityName">Name of Activity:</label>
                 <input type="text" id="activityName" name="activityName" required />
@@ -125,7 +125,7 @@ include ("header.php");
                 <label for="organizer">Organized by:</label>
                 <input type="text" id="organizer" name="organizer" required />
             </div>
-            <fieldset>
+            <!-- <fieldset>
                 <legend>Requirements:</legend>
                 <div class="checkbox-group">
                     <label for="ground">Ground</label>
@@ -141,13 +141,13 @@ include ("header.php");
                     <label for="video">Video</label>
                     <input type="checkbox" id="video" name="requirements" value="Video" />
                 </div>
-            </fieldset>
+            </fieldset> -->
 
-            <label for="budget">Budget :
-            </label>
+            <!-- <label for="budget">Budget :
+            </label> -->
 
 
-            <input type="submit" id="submit" name="submit" />
+            <input type="submit" id="submit" name="sendact" />
 
 
         </form>
