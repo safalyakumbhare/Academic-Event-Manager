@@ -23,3 +23,4 @@ CREATE TABLE  IF NOT EXISTS `activity` (
     `sendtohod` VARCHAR(10),
     `dept`  VARCHAR(30),
 );
+

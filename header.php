@@ -14,13 +14,17 @@ $name = $_SESSION['name'];
 </head>
 
 <body>
+
     <div class="Task">
         <nav>
             <Ul class="heading">
-                <a href="index.php"><Li class="head">Academic event managment</Li></a>
+                <a href="index.php">
+                    <Li class="head">Academic event managment</Li>
+                </a>
             </Ul>
             <ul>
-                <li>Welcome
+                <li>Welcome</li>
+                <li style="text-transform:uppercase;">
                     <?php echo "$name"; ?>
                 </li>
                 <!-- <li><a href="#">Principal</a></li>
