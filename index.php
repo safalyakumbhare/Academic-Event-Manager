@@ -29,9 +29,12 @@
     </header>
 
     <section class="homepage" id="home">
+    <video autoplay loop muted src="event.mp4"></video>
+
       <div class="content">
+
         <div class="text">
-          <h1>Academic Event Management </h1>
+          <!-- <h1>Academic Event Management </h1> -->
 
         </div>
         <a href="loginpage.php">Get Started</a>

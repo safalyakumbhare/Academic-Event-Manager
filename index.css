@@ -75,18 +75,17 @@ header a:hover, footer a:hover {
 
 .homepage {
   height: 100vh;
-  width: 100%;
-  position: relative;
-  background: url("image/raisoniimg.png");
-  background-position: center 65%;
-  background-size: cover;
+  width: 100vw; 
+  position: relative; 
+  /* background: url("image/raisoniimg.png"); */
+  /* background-position: center 65%; */
 }
 
 .homepage::before {
   content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
+  /* position: absolute; */
+  /* left: 0;
+  top: 0;  */
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.2);
@@ -104,9 +103,18 @@ header a:hover, footer a:hover {
 .homepage .content h1 {
   font-size: 60px;
   font-weight: 700;
+  position: relative;
   margin-bottom: 10px;
 }
-
+.homepage video{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  /* position: relative; */
+  background-size: cover;
+  background-position: center 100%;
+  /* z-index: 4; */
+}
 .homepage .content .text {
   margin-bottom: 50px;
   color: #fff;
