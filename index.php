@@ -140,7 +140,7 @@
             <p><i class="fas fa-phone"></i><a href="mailto:bhuwangajghat@gmail.com">Bhuvan Gajghat</a></p>
             <p><i class="fas fa-clock"></i><a href="mailto:pravindparadkar2003@gmail.com">Pravin Paradkar</a></p>
             <p><i class="fas fa-clock"></i><a href="mailto:dhankawale2003@gmail.com">Dhananjay Kawale</a></p>
-            <p><i class="fas fa-clock">Contact Us : <a href="tel:9096758272">9096758272</a> </p>
+            <!-- <p><i class="fas fa-clock">Contact Us : <a href="tel:9096758272">9096758272</a> </p> -->
             <p><i class="fas fa-globe"></i>Acedemic Event Manager</p>
           </div>
         </div>
@@ -158,7 +158,7 @@
     <footer>
 
       <div>
-        <span>Copyright © 2023 All Rights Reserved</span>
+        <span>Copyright © 2024 All Rights Reserved</span>
         <!-- <span class="link">
           <a href="#home">Home</a>
           <a href="#contact">Contact</a>
