@@ -125,23 +125,23 @@ include ("header.php");
                 <label for="organizer">Organized by:</label>
                 <input type="text" id="organizer" name="organizer" required />
             </div>
-            <!-- <fieldset>
+            <fieldset>
                 <legend>Requirements:</legend>
                 <div class="checkbox-group">
                     <label for="ground">Ground</label>
-                    <input type="checkbox" id="ground" name="requirements" value="Ground" />
+                    <input type="checkbox" id="ground" name="ground" value="Ground" />
                     <label for="sportsRoom">Sports Room</label>
-                    <input type="checkbox" id="sportsRoom" name="requirements" value="Sports Room" />
+                    <input type="checkbox" id="sportsRoom" name="sportroom" value="Sports Room" />
                     <label for="auditorium">Auditorium</label>
-                    <input type="checkbox" id="auditorium" name="requirements" value="Auditorium" />
+                    <input type="checkbox" id="auditorium" name="auditorium" value="Auditorium" />
                     <label for="soundSystem">Sound System</label>
-                    <input type="checkbox" id="soundSystem" name="requirements" value="Sound System" />
+                    <input type="checkbox" id="soundSystem" name="sound" value="Sound System" />
                     <label for="photography">Photography</label>
-                    <input type="checkbox" id="photography" name="requirements" value="Photography" />
+                    <input type="checkbox" id="photography" name="photo" value="Photography" />
                     <label for="video">Video</label>
-                    <input type="checkbox" id="video" name="requirements" value="Video" />
+                    <input type="checkbox" id="video" name="video" value="Video" />
                 </div>
-            </fieldset> -->
+            </fieldset>
 
             <!-- <label for="budget">Budget :
             </label> -->
