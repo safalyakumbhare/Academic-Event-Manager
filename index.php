@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Academic Event Manager</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
-  <!-- <link rel="stylesheet" href="style.css"> -->
-  <!-- Fontawesome Link for Icons -->
   <link rel="stylesheet" href="index.css">
 
 </head>
@@ -16,13 +14,7 @@
   <div id="main">
     <header>
       <nav class="navbar">
-        <h1 class="logo"><a href="#">Academic Event Management</a></h1>
-        <!-- <input type="checkbox" id="menu-toggler"> -->
-        <!-- <label for="menu-toggler" id="hamburger-btn"> -->
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px"> -->
-        <!-- <path d="M0 0h24v24H0z" fill="none" />
-            <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z" /> -->
-        <!-- </svg> -->
+        <h1 class="logo"><a href="#">Academic Event Manager</a></h1>
         </label>
 
       </nav>
@@ -131,7 +123,7 @@
         <ul>
           <li>Bhuvan Gajghat - Frontend Developer</li>
           <li>Pravin Paradkar - Frontend Developer</li>
-          <li>Safalya Kumbhare - Full Stack Developer</li>
+          <li>Safalya Kumbhare - Visual Effects and Backend Developer</li>
           <li>Dhananjay Kawale</li>
         </ul>
       </div>
@@ -143,13 +135,13 @@
       <div class="row">
         <div class="col information">
           <div class="contact-details">
-            <p><i class="fas fa-map-marker-alt"></i> 123 Campsite Avenue, Wilderness, CA 98765</p>
-            <p><i class="fas fa-envelope"></i> info@campinggearexperts.com</p>
-            <p><i class="fas fa-phone"></i> (123) 456-7890</p>
-            <p><i class="fas fa-clock"></i> Monday - Friday: 9:00 AM - 5:00 PM</p>
-            <p><i class="fas fa-clock"></i> Saturday: 10:00 AM - 3:00 PM</p>
-            <p><i class="fas fa-clock"></i> Sunday: Closed</p>
-            <p><i class="fas fa-globe"></i> www.codingenpalweb.com</p>
+            <p><i class="fas fa-map-marker-alt"></i>Reach Out Us</p>
+            <p><i class="fas fa-envelope"></i><a href="mailto:safalyakumbhare@gmail.com">Safalya Kumbhare</a></p>
+            <p><i class="fas fa-phone"></i><a href="mailto:bhuwangajghat@gmail.com">Bhuvan Gajghat</a></p>
+            <p><i class="fas fa-clock"></i><a href="mailto:pravindparadkar2003@gmail.com">Pravin Paradkar</a></p>
+            <p><i class="fas fa-clock"></i><a href="mailto:dhankawale2003@gmail.com">Dhananjay Kawale</a></p>
+            <p><i class="fas fa-clock">Contact Us : <a href="tel:9096758272">9096758272</a> </p>
+            <p><i class="fas fa-globe"></i>Acedemic Event Manager</p>
           </div>
         </div>
         <div class="col form">
