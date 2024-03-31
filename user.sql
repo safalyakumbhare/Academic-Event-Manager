@@ -24,3 +24,6 @@ CREATE TABLE  IF NOT EXISTS `activity` (
     `dept`  VARCHAR(30),
 );
 
+CREATE TABLE IF NOT EXISTS `requirement`(
+    ``
+)

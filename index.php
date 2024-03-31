@@ -19,21 +19,21 @@
         <h1 class="logo"><a href="#">Academic Event Management</a></h1>
         <!-- <input type="checkbox" id="menu-toggler"> -->
         <!-- <label for="menu-toggler" id="hamburger-btn"> -->
-          <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px"> -->
-            <!-- <path d="M0 0h24v24H0z" fill="none" />
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px"> -->
+        <!-- <path d="M0 0h24v24H0z" fill="none" />
             <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z" /> -->
-          <!-- </svg> -->
+        <!-- </svg> -->
         </label>
 
       </nav>
     </header>
 
     <section class="homepage" id="home">
-    <video autoplay loop muted src="event.mp4"></video>
+      <video autoplay loop muted src="event.mp4"></video>
 
       <div class="content">
 
-        
+
         <a href="loginpage.php">Get Started</a>
       </div>
     </section>
@@ -186,7 +186,24 @@
       el: document.querySelector("#main"),
       smooth: true,
     });
+    let sections = document.querySelectorAll('section');
 
+    window.onscroll = () => {
+      sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+
+        if (top >= offset && top < offset + height) {
+          sec.classList.add('show-animate');
+        }
+        // if want to use repeating animation on scroll, use this
+        else {
+          sec.classList.remove('show-animate');
+
+        }
+      })
+    }
   </script>.
 
 </body>
