@@ -125,26 +125,46 @@ include ("header.php");
                 <label for="organizer">Organized by:</label>
                 <input type="text" id="organizer" name="organizer" required />
             </div>
-            <fieldset>
-                <legend>Requirements:</legend>
-                <div class="checkbox-group">
-                    <label for="ground">Ground</label>
-                    <input type="checkbox" id="ground" name="ground" value="Ground" />
-                    <label for="sportsRoom">Sports Room</label>
-                    <input type="checkbox" id="sportsRoom" name="sportroom" value="Sports Room" />
-                    <label for="auditorium">Auditorium</label>
-                    <input type="checkbox" id="auditorium" name="auditorium" value="Auditorium" />
-                    <label for="soundSystem">Sound System</label>
-                    <input type="checkbox" id="soundSystem" name="sound" value="Sound System" />
-                    <label for="photography">Photography</label>
-                    <input type="checkbox" id="photography" name="photo" value="Photography" />
-                    <label for="video">Video</label>
-                    <input type="checkbox" id="video" name="video" value="Video" />
-                </div>
-            </fieldset>
+            <label for="req">Requirements : </label>
+            <div class="checkbox-group">
+                <label for="ground">Ground</label>
+                <input type="checkbox" id="ground" name="ground" value="Ground" />
+                <label for="sportsRoom">Sports Room</label>
+                <input type="checkbox" id="sportsRoom" name="sportroom" value="Sports Room" />
+                <label for="auditorium">Auditorium</label>
+                <input type="checkbox" id="auditorium" name="auditorium" value="Auditorium" />
+                <label for="soundSystem">Sound System</label>
+                <input type="checkbox" id="soundSystem" name="sound" value="Sound System" />
+                <label for="photography">Photography</label>
+                <input type="checkbox" id="photography" name="photo" value="Photography" />
+                <label for="video">Video</label>
+                <input type="checkbox" id="video" name="video" value="Video" />
+            </div>
 
-            <!-- <label for="budget">Budget :
-            </label> -->
+
+            <label for="budget">Budget :
+            </label>
+
+            <label for="particular">Particular : </label>
+            <input type="text" id="particular" name="particular" />
+            <label for="price">Price : </label>
+            <input type="text" id="price" name="price" />
+            <label for="quantity">Quantity : </label>
+            <input type="text" id="quantity" name="quantity" />
+
+            <input type="submit" name="sheet" id="sheet" value="Add to Sheet">
+
+            <table border=1>
+                <thead>
+                    <tr>
+                        <th>Sr No.</th>
+                        <th>Particular</th>
+                        <th>Price</th>
+                        <th>Qty.</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+            </table>
 
 
             <input type="submit" id="submit" name="sendact" />

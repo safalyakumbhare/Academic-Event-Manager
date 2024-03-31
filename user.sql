@@ -35,3 +35,12 @@ CREATE TABLE IF NOT EXISTS `requirement`(
     `from` DATE,
     `to`    DATE
 );
+
+
+CREATE TABLE IF NOT EXISTS `budget`(
+    `eventname` VARCHAR(30),
+    `particular`  VARCHAR(30),
+    `amount` DECIMAL,
+    `qty`  INT,
+    `total` DECIMAL
+);
