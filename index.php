@@ -22,12 +22,13 @@
 
     <section class="homepage" id="home">
       <video autoplay loop muted src="event.mp4"></video>
-
-      <div class="content">
-
-
-        <a href="loginpage.php">Get Started</a>
-      </div>
+      <a href="loginpage.php">
+        <div class="buttons">
+          <button class="btn"><span></span>
+            <p data-start="good luck!" data-text="Now!" data-title="Get Started"></p>
+          </button>
+        </div>
+      </a>
     </section>
 
     <section class="services" id="services">
