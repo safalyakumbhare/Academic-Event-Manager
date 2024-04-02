@@ -50,14 +50,30 @@ include ("header.php");
       </a>
     </button>
     <button class="bttn">
-      <div class="box hover-box" id="show-events">
-        <div class="content">
-          <h2>Show Events</h2>
-          <p>See Status and Upcoming Events Report</p>
+      <a href="New Faculty.php">
+        <div class="box hover-box" id="new-faculty">
+          <div class="content">
 
+            <h2>Show Event</h2>
+            <p>See latest Event Status</p>
+
+          </div>
         </div>
-      </div>
+      </a>
     </button>
+    <button class="bttn">
+      <a href="New Faculty.php">
+        <div class="box hover-box" id="new-faculty">
+          <div class="content">
+
+            <h2>Show Faculty</h2>
+            <p>Show and Remove Faculty</p>
+
+          </div>
+        </div>
+      </a>
+    </button>
+
   </div>
 </body>
 
