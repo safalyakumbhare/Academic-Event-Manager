@@ -1,5 +1,7 @@
 <?php
 include ("header.php");
+// include('AddNewActivity.php');
+$actname = $_SESSION['actname']; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +9,7 @@ include ("header.php");
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Activity Proposal Form</title>
+    <title>Budget Section</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -59,6 +61,8 @@ include ("header.php");
             background-color: #4caf50;
             color: #fff;
             padding: 10px 20px;
+            margin: 1vw;
+
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -90,13 +94,48 @@ include ("header.php");
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th,
+        table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        table th {
+            background-color: #f2f2f2;
+        }
+
+        .gross-total {
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        .gross-total span:first-child {
+            font-weight: bold;
+        }
+
+        #gross-total-value {
+            font-weight: bold;
+            color: purple;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
         <h2>Budget Section</h2>
-        <form id="activityForm" action="AddNewActivity.php" method="POST">
+        <h2>Activity : <?php echo "$actname"?></h2>
+        <form id="activityForm" action="AddBudget.php" method="POST">
             <div class="form-group">
                 <label for="particular">Particular :</label>
                 <input type="text" id="particular" name="particular" required />
@@ -109,10 +148,29 @@ include ("header.php");
                 <label for="qty">Quantity :</label>
                 <input type="text" id="qty" name="qty" required />
             </div>
-            
-            
+            <input type="submit" id="submit" value="Add to Sheet" name="sendbudget" />
 
-            <input type="submit" id="submit" name="sendact" />
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>SnNo</th>
+                            <th>Particular</th>
+                            <th>Price</th>
+                            <th>Qty.</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Table rows will be dynamically added here -->
+                    </tbody>
+                </table>
+                <div class="gross-total">
+                    <span>Gross Total</span>
+                    <span id="gross-total-value">0</span>
+                </div>
+            </div>
+
 
 
         </form>

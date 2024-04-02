@@ -1,7 +1,7 @@
 <?php
 
 include("connection.php");
-
+session_start();
 if (isset($_POST['sendact'])) {
     $actname = $_POST['activityName'];
     $actdes = $_POST['activitydes'];
@@ -10,7 +10,7 @@ if (isset($_POST['sendact'])) {
     $place = $_POST['place'];
     $time = $_POST['time'];
     $orgby = $_POST['organizer'];
-
+    $_SESSION['actname'] =  $actname;
     // First SQL Query for inserting into 'activity' table
     $sql_activity = "INSERT INTO `activity` VALUES ('$actname','$actdes','$startdate','$enddate','$place','$time','$orgby','YES')";
     $result_activity = mysqli_query($conn, $sql_activity);
