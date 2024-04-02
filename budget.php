@@ -1,129 +1,122 @@
+<?php
+include ("header.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Budget</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f0f0;
-    }
+    <title>Activity Proposal Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: aliceblue;
+            /* margin: 0 */
+        }
 
-    .container {
-      width: 80%;
-      margin: 50px auto;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    }
+        .container {
+            width: 80vw;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-    .header {
-      font-size: 24px;
-      font-weight: bold;
-      color: green;
-    }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-    .content {
-      margin-top: 20px;
-    }
+        .form-group {
+            margin-bottom: 20px;
+        }
 
-    .input-group {
-      display: flex;
-      margin-bottom: 20px;
-    }
+        label {
+            display: block;
+            font-weight: bold;
+        }
 
-    .input-group label {
-      flex: 1;
-      margin-right: 10px;
-    }
+        input[type="text"],
+        input[type="date"],
+        input[type="time"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-top: 5px;
+            font-size: 16px;
+        }
 
-    .input-group input {
-      flex: 2;
-      padding: 5px;
-    }
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
 
-    .input-group button {
-      padding: 5px 10px;
-      background-color: green;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
+        #submit {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
 
-    .table-container {
-      overflow-x: auto;
-    }
+        #submit:hover {
+            background-color: #45a049;
+        }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
+        .checkbox-group {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
 
-    table th,
-    table td {
-      border: 1px solid #ddd;
-      padding: 8px;
-      text-align: center;
-    }
+        .checkbox-group input[type="checkbox"] {
+            margin: 20px;
+        }
 
-    table th {
-      background-color: #f2f2f2;
-    }
+        fieldset {
+            width: 30vw;
+        }
 
-    .gross-total {
-      margin-top: 20px;
-      text-align: right;
-    }
+        #activitydes {
+            width: 100%;
+            height: 10vw;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
 
-    .gross-total span:first-child {
-      font-weight: bold;
-    }
-
-    #gross-total-value {
-      font-weight: bold;
-      color: purple;
-    }
-  </style>
-  <body>
+<body>
     <div class="container">
-      <div class="header">Budget...</div>
-      <div class="content">
-        <div class="input-group">
-          <label for="particular">Particular</label>
-          <input type="text" id="particular" />
-          <label for="price">Price</label>
-          <input type="text" id="price" />
-          <label for="quantity">Qty.</label>
-          <input type="text" id="quantity" />
-          <button>Add to Sheet</button>
-        </div>
-        <div class="table-container">
-          <table>
-            <thead>
-              <tr>
-                <th>SnNo</th>
-                <th>Particular</th>
-                <th>Price</th>
-                <th>Qty.</th>
-                <th>Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- Table rows will be dynamically added here -->
-            </tbody>
-          </table>
-          <div class="gross-total">
-            <span>Gross Total</span>
-            <span id="gross-total-value">0</span>
-          </div>
-        </div>
-      </div>
+        <h2>Budget Section</h2>
+        <form id="activityForm" action="AddNewActivity.php" method="POST">
+            <div class="form-group">
+                <label for="particular">Particular :</label>
+                <input type="text" id="particular" name="particular" required />
+            </div>
+            <div class="form-group">
+                <label for="price">Price :</label>
+                <input type="text" id="price" name="price" required />
+            </div>
+            <div class="form-group">
+                <label for="qty">Quantity :</label>
+                <input type="text" id="qty" name="qty" required />
+            </div>
+            
+            
+
+            <input type="submit" id="submit" name="sendact" />
+
+
+        </form>
     </div>
-  </body>
+</body>
+
 </html>

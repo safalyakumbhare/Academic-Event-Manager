@@ -35,17 +35,20 @@ include ("header.php");
         </div>
       </a>
     </button>
+   
     <button class="bttn">
-      <a href="#">
-        <div class="box hover-box" id="show-events">
+      <a href="NewActivity.php">
+        <div class="box hover-box" id="new-faculty">
           <div class="content">
+
             <h2>Report of Activity</h2>
-            <p>See Status and Upcoming Events Report</p>
+            <p>See the Apporval Status</p>
 
           </div>
         </div>
       </a>
     </button>
+   
   </div>
 </body>
 

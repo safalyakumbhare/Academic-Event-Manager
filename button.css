@@ -3,7 +3,9 @@
   padding: o;
   box-sizing: border-box;
 }
-
+body {
+  background-color: aliceblue;
+}
 .container {
   /* height: 80vh;
   width: 100vw; */
@@ -34,8 +36,8 @@
 }
 
 .box {
-  width: 300px;
-  height: 200px;
+  width: 25vw;
+  height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,7 +53,7 @@
 }
 
 .content p {
-  color:darkgray;
+  color: darkgray;
   font-size: 16px;
   margin-top: 10px;
   transition: 0.3s ease-in-out;
