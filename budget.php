@@ -1,7 +1,7 @@
 <?php
 include ("header.php");
-// include('AddNewActivity.php');
-$actname = $_SESSION['actname']; 
+include ('AddNewActivity.php');
+$actname = $_SESSION['actname'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -134,7 +134,9 @@ $actname = $_SESSION['actname'];
 <body>
     <div class="container">
         <h2>Budget Section</h2>
-        <h2>Activity : <?php echo "$actname"?></h2>
+        <h2>Activity :
+            <?php echo "$actname" ?>
+        </h2>
         <form id="activityForm" action="AddBudget.php" method="POST">
             <div class="form-group">
                 <label for="particular">Particular :</label>
