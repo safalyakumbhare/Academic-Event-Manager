@@ -14,10 +14,10 @@ body {
   /* width: 100%;
     min-height: 100vh; */
   background: rgba(249, 246, 246, 0);
-  color: bisque;
+  color: #f6ab48;
 }
 nav {
-  background: rgb(9, 45, 130);
+  background: #00306e;
   width: 100%;
   height: 80px;
   padding: 10px;
@@ -41,7 +41,7 @@ li {
   display: inline-block;
   list-style: none;
   margin: 10px 30px;
-  font-size: 30px;
+  font-size: 20px;
 }
 .heading {
   width: 100%;
@@ -51,7 +51,7 @@ li {
   display: inline-block;
   list-style: none;
 
-  font-size: 40px;
+  font-size: 30px;
 }
 a {
   color: rgb(251, 250, 251);
