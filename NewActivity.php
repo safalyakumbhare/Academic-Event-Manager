@@ -102,7 +102,7 @@ include ("header.php");
                 <input type="text" id="activityName" name="activityName" required />
             </div>
             <div class="form-group">
-                <label for="activityName">Name of Activity:</label>
+                <label for="activityName">Activity Description :</label>
                 <textarea id="activitydes" name="activitydes" required></textarea>
             </div>
             <div class="form-group">
@@ -142,7 +142,7 @@ include ("header.php");
             </div>
 
 
-            <label for="budget">Budget :
+            <!-- <label for="budget">Budget :
             </label>
 
             <label for="particular">Particular : </label>
@@ -164,7 +164,7 @@ include ("header.php");
                         <th>Total</th>
                     </tr>
                 </thead>
-            </table>
+            </table> -->
 
 
             <input type="submit" id="submit" name="sendact" />

@@ -30,8 +30,8 @@ if (isset($_POST['sendact'])) {
         $result_requirement = mysqli_query($conn, $sql_requirement);
 
         if ($result_requirement) {
-            echo "<script>alert('Activity Recorded Sent to HOD Successfully')</script>";
-            include("HomeFaculty.php");
+            echo "<script>alert('Activity Recorded. Now Go to Budget Section')</script>";
+            include("budget.php");
         } else {
             echo "Error inserting data into 'requirement' table: " . mysqli_error($conn);
         }
