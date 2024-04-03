@@ -1,7 +1,7 @@
 <?php
 include ("header.php");
 // include ('AddNewActivity.php');
-$actname = $_SESSION['actname'];
+// $actname = $_SESSION['actname'];
 
 require_once ("connection.php");
 // include ("AddNewActivity.php");
@@ -184,9 +184,9 @@ if (isset($_POST['sendbudget'])) {
 <body>
     <div class="container">
         <h2>Budget Section</h2>
-        <!-- <h2>Activity :
-            <?php echo "$actname" ?>
-        </h2> -->
+        <h2>Activity :
+            <?php echo "$name" ?>
+        </h2>
         <form id="activityForm" action="budget.php" method="POST">
             <div class="form-group">
                 <label for="particular">Particular :</label>
