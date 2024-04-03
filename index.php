@@ -70,7 +70,7 @@
         </li>
         <li class="card">
           <img src="image/antargni-11.avif" alt="img">
-          <h3>Flash Mop</h3>
+          <h3>FlashMob</h3>
 
         </li>
         <li class="card">

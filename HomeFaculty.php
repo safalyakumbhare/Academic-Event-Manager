@@ -9,7 +9,7 @@ include ("header.php");
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="button.css">
-  <title>Hod Home Page</title>
+  <title>Faculty Home Page</title>
 
 </head>
 
@@ -37,7 +37,7 @@ include ("header.php");
     </button>
    
     <button class="bttn">
-      <a href="NewActivity.php">
+      <a href="#">
         <div class="box hover-box" id="new-faculty">
           <div class="content">
 

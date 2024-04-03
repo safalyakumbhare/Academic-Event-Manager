@@ -14,12 +14,7 @@ include ("header.php");
 </head>
 
 <body>
-  <!-- <nav>
-        <h1>Acadmeic event managment</h1>
-        <ul>
-            <li>Welcome admin</li>
-        </ul>
-    </nav> -->
+
   <div class="container">
 
 
@@ -36,7 +31,7 @@ include ("header.php");
       </a>
     </button>
     <button class="bttn">
-      <a href="New Faculty for HOD.php">
+      <a href="#">
         <div class="box hover-box" id="new-faculty">
           <div class="content">
 

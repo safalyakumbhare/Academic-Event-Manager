@@ -41,7 +41,7 @@ $name = $res
                     <div class="user info">
 
                     </div>
-                    <a href="loginpage.php" class="menu-link">
+                    <a href="logout.php" class="menu-link">
                         <img src="icons8-login-50.png">
                         <P>Log Out</P>
                         <span>></span>
