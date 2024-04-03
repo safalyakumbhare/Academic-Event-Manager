@@ -1,25 +1,25 @@
 <?php
 include ("header.php");
 // include ('AddNewActivity.php');
-// $actname = $_SESSION['actname'];
+$actname = $_SESSION['actname'];
 
 require_once ("connection.php");
 // include ("AddNewActivity.php");
 
 if (isset($_POST['sendbudget'])) {
-    // $name = $_SESSION['actname'];
+    $name = $_SESSION['actname'];
     $particular = $_POST['particular'];
     $price = $_POST['price'];
     $qty = $_POST['qty'];
     $total = $price * $qty;
 
     // Insert the new budget entry into the database
-    $sql = "INSERT INTO `budget` VALUES ('carrom', '$particular', '$price', '$qty', '$total')";
+    $sql = "INSERT INTO `budget` VALUES ('$name', '$particular', '$price', '$qty', '$total')";
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
         // Fetch all budget entries for the current event
-        $sql_show = "SELECT * FROM `budget` WHERE eventname = 'carrom'";
+        $sql_show = "SELECT * FROM `budget` WHERE eventname = '$name'";
         $res = mysqli_query($conn, $sql_show);
 
         // Check if there are any entries
