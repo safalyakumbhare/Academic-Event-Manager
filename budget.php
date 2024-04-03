@@ -1,8 +1,58 @@
 <?php
 include ("header.php");
-include ('AddNewActivity.php');
-$actname = $_SESSION['actname'];
+// include ('AddNewActivity.php');
+// $actname = $_SESSION['actname'];
+
+require_once ("connection.php");
+// include ("AddNewActivity.php");
+
+if (isset($_POST['sendbudget'])) {
+    // $name = $_SESSION['actname'];
+    $particular = $_POST['particular'];
+    $price = $_POST['price'];
+    $qty = $_POST['qty'];
+    $total = $price * $qty;
+
+    // Insert the new budget entry into the database
+    $sql = "INSERT INTO `budget` VALUES ('carrom', '$particular', '$price', '$qty', '$total')";
+    $result = mysqli_query($conn, $sql);
+
+    if ($result) {
+        // Fetch all budget entries for the current event
+        $sql_show = "SELECT * FROM `budget` WHERE eventname = 'carrom'";
+        $res = mysqli_query($conn, $sql_show);
+
+        // Check if there are any entries
+        if (mysqli_num_rows($res) == 1) {
+            // Display the table header
+            // echo "<div class='table-container'>";
+            // echo "<table>";
+            // echo "<thead>";
+            // echo "<tr>";
+            // echo "<th>SnNo</th>";
+            // echo "<th>Particular</th>";
+            // echo "<th>Price</th>";
+            // echo "<th>Qty.</th>";
+            // echo "<th>Total</th>";
+            // echo "</tr>";
+            // echo "</thead>";
+            // echo "<tbody>";
+
+            // Display each budget entry
+
+
+            // echo "</tbody>";
+            // echo "</table>";
+            // echo "</div>";
+        } else {
+            // echo "No budget entries found for this event.";
+        }
+    } else {
+        echo "Error: " . mysqli_error($conn);
+    }
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -134,10 +184,10 @@ $actname = $_SESSION['actname'];
 <body>
     <div class="container">
         <h2>Budget Section</h2>
-        <h2>Activity :
+        <!-- <h2>Activity :
             <?php echo "$actname" ?>
-        </h2>
-        <form id="activityForm" action="AddBudget.php" method="POST">
+        </h2> -->
+        <form id="activityForm" action="budget.php" method="POST">
             <div class="form-group">
                 <label for="particular">Particular :</label>
                 <input type="text" id="particular" name="particular" required />
@@ -164,6 +214,22 @@ $actname = $_SESSION['actname'];
                         </tr>
                     </thead>
                     <tbody>
+                        <?php
+                        $count = 1;
+                        while ($show = mysqli_fetch_array($res)) {
+                            echo "<tr>";
+                            echo "<td>" . $count . "</td>";
+                            echo "<td>" . $show['particular'] . "</td>";
+                            echo "<td>" . $show['amount'] . "</td>";
+                            echo "<td>" . $show['qty'] . "</td>";
+                            echo "<td>" . $show['total'] . "</td>";
+                            echo "</tr>";
+                            $count++;
+                        }
+
+
+                        ?>
+
                         <!-- Table rows will be dynamically added here -->
                     </tbody>
                 </table>
