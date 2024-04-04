@@ -46,11 +46,11 @@ $name = $res
                         <P>Log Out</P>
                         <span>></span>
                     </a>
-                    <!-- <a href="#" class="menu-link">
+                    <a href="ChangePass.php" class="menu-link">
                         <img src="icons8-services-30.png">
-                        <P>Services</P>
+                        <P>Change Password</P>
                         <span>></span>
-                    </a> -->
+                    </a>
                     <!-- <a href="#" class="menu-link">
                         <img src="icons8-about-24.png">
                         <P>About us</P>
