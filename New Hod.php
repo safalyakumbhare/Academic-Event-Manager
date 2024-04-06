@@ -12,7 +12,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>New HoD Registration</h1>
+    <h1 class="title">New HOD Registration</h1>
     <form class="registration-form" action="Addhod.php" method="POST" >
       <label for="hodName">Name of HoD:</label>
       <input type="text" id="Name" name="Name" required>

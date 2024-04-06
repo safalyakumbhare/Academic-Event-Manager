@@ -14,7 +14,7 @@ include ("header.php")
 
 <body>
   <div class="container">
-    <h1>New Faculty Registration</h1>
+    <h1 class="title">New Faculty Registration</h1>
     <form class="registration-form" action="AddFacultyforHOD.php" method="POST">
       <label for="hodName">Name of Faculty:</label>
       <input type="text" id="Name" name="Name" required>
