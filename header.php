@@ -34,7 +34,7 @@ $name = $res
             <li><a href="#">HoD login</a></li>
             <li><a href="#">Faculty</a></li> -->
 
-                <img src="icons8-menu-50.png" class="dot" onclick="toggleMenu()">
+                <img src="image\icons8-menu-50.png" class="dot" onclick="toggleMenu()">
             </ul>
             <div class="sub-menu-wrap" id="submenu">
                 <div class="sub-menu">
@@ -42,12 +42,12 @@ $name = $res
 
                     </div>
                     <a href="logout.php" class="menu-link">
-                        <img src="icons8-login-50.png">
+                        <img src="image\icons8-login-50.png">
                         <P>Log Out</P>
                         <span>></span>
                     </a>
                     <a href="ChangePass.php" class="menu-link">
-                        <img src="image.png">
+                        <img src="image\image.png">
                         <P>Change Password</P>
                         <span>></span>
                     </a>
