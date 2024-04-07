@@ -1,4 +1,5 @@
 <?php
+session_unset();
 session_destroy();
-include("loginpage.php");
+header("Location :loginpage.php");
 ?>
