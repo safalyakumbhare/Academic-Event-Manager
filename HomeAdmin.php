@@ -57,12 +57,12 @@ include ("header.php");
       </a>
     </button>
     <button class="bttn">
-      <a href="#">
+      <a href="staffreport.php">
         <div class="box hover-box" id="new-faculty">
           <div class="content">
 
-            <h2>Show Faculty</h2>
-            <p>Show and Remove Faculty</p>
+            <h2>Show Staff</h2>
+            <p>Monitor Your Staff</p>
 
           </div>
         </div>
