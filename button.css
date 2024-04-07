@@ -7,16 +7,10 @@ body {
   background-color: aliceblue;
 }
 .container {
-  /* height: 80vh;
-  width: 100vw; */
-  /* display: flex; */
-  /* flex-direction: row;
-  justify-content: center;
-  align-items: center; */
-  /* gap: 20px; */
-  /* padding: 1vw; */
-  box-sizing: border-box;
-  margin: auto;
+    display: grid;
+    place-items: center;
+    grid-template-columns: auto auto auto;
+
 }
 
 .bttn {
@@ -25,7 +19,7 @@ body {
   cursor: pointer;
   overflow: hidden;
   transition: all 0.3s ease;
-  padding: 5vw;
+  padding: 4vw;
 }
 
 .hover-box {
