@@ -23,6 +23,7 @@ if (isset($_POST['change'])) {
 
             if ($update_result) {
                 echo "<script>alert('Password Changed');</script>";
+                include("loginpage.php");
             } else {
                 echo "<script>alert('Error in updating password');</script>";
             }
