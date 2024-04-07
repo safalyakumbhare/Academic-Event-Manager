@@ -47,7 +47,7 @@ $name = $res
                         <span>></span>
                     </a>
                     <a href="ChangePass.php" class="menu-link">
-                        <img src="icons8-services-30.png">
+                        <img src="image.png">
                         <P>Change Password</P>
                         <span>></span>
                     </a>

@@ -30,12 +30,13 @@ nav {
   width: 25px;
   border-radius: 50%;
   cursor: pointer;
-  margin-right: 2vw;
+  margin-top:1vw;
+  margin-right:1vw;
 }
 ul {
   width: 100%;
   text-align: right;
-  margin-left: -69px;
+  /* margin-left: -69px; */
 }
 li {
   display: inline-block;
@@ -72,8 +73,8 @@ a {
 .sub-menu {
   background: rgb(9, 45, 130);
   backdrop-filter: blur(50px);
-  padding: 20px;
-  margin: 10px;
+  padding: 15px;
+  margin: 5px;
 }
 .user-info {
   display: flex;
@@ -88,8 +89,8 @@ a {
 }
 .menu-link p {
   width: 100%;
-  font-size: 20px;
-  transition: font-size 0.5s;
+  font-size: 18px;
+  transition: font-size 0.9s;
   color: rgb(251, 251, 251);
 }
 .menu-link img {
@@ -100,14 +101,14 @@ a {
   margin-right: 15px;
 }
 .menu-link span {
-  font-size: 22px;
+  font-size: 20px;
   transition: transform 0.5s;
 }
 .menu-link:hover span {
   transform: translateX(5px);
 }
 .menu-link:hover p {
-  font-size: 25px;
+  font-size: 22px;
 }
 p {
   font-size: 16px;
