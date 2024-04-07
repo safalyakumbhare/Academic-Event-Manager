@@ -10,6 +10,11 @@ body {
   background-position: center;
   background-size: cover;
 }
+.container{
+  display: grid;
+  place-items: center;
+  grid-template-columns: auto auto;
+}  
 .Task {
   /* width: 100%;
     min-height: 100vh; */

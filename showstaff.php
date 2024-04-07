@@ -1,21 +1,14 @@
 <?php
-include("connection.php");
-$sql = "SELECT desig,name, dept, username, password FROM `login`";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    // Output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "<tr>
-                <td>".$row["desig"]."</td>
-                <td>".$row["name"]."</td>
-                <td>".$row["dept"]."</td>
-                <td>".$row["username"]."</td>
-                <td>".$row["password"]."</td>
+include ("connection.php");
+$sql = "SELECT * FROM `login`";
+$result = mysqli_query($conn, $sql);
+while ($row =mysqli_fetch_assoc($result)) {
+    echo "<tr>
+                <td>" . $row["desig"] . "</td>
+                <td>" . $row["name"] . "</td>
+                <td>" . $row["dept"] . "</td>
+                <td>" . $row["username"] . "</td>
+                <td>" . $row["password"] . "</td>
             </tr>";
-    }
-} else {
-    echo "0 results";
 }
-$conn->close();
 ?>

@@ -12,6 +12,7 @@ include ("header.php")
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: aliceblue;
         }
         h1{
             text-align: center;
@@ -19,14 +20,16 @@ include ("header.php")
         }
         table {
             width: 80%;
-            border-collapse: collapse;
+            /* border-collapse: ; */
             margin: 20px auto;
+            background-color: white;
         }
 
         th,
         td {
             padding: 10px;
             text-align: left;
+            margin: 20px auto;
             border: 1px solid #ddd;
         }
 
