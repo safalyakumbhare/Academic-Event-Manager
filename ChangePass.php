@@ -2,11 +2,7 @@
   require_once("connection.php");
  include("header.php");
 
- if(isset($_POST['changepass'])){
-    $crnt = $_POST['crntpass'];
-    $nw = $_POST['newpass'];
-    $cnf = $_POST['conpass'];
- }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,20 +15,22 @@
 <body>
   <div class="container">
     <h1>Change Password</h1>
-    <form action="" method="POST" class="registration-form">
+    <form action="Change.php" method="POST" class="registration-form">
         <label for="crntpass">Current Password : </label>
-        <input type="password" id="crntpass" name=""crntpass" required>
+        <input type="password" id="crntpass" name="oldpass" required>
 
         <label for="newpass">New Password: </label>
         <input type="password" id="newpass" name="newpass" required/>
         
         <label for="conpass">Confirm Password: </label>
-        <input type="text" id="conpass" name="conpass" required>
+        <input type="password" id="conpass" name="conpass" required>
 
-        <input type="submit" name="changepass">
+        <input type="submit" name="change" value="Change Password">
+    </form>
+  </div>
+</body>
+</html>
 
-    </form>
-    </form>
   </div>
 </body>
 </html>
