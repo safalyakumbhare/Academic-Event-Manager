@@ -1,8 +1,7 @@
 <?php
 include ("header.php");
 // include ('AddNewActivity.php');
-// $actname = $_SESSION['actname'];
-
+$actname = $_SESSION['actname'];
 require_once ("connection.php");
 // include ("AddNewActivity.php");
 
@@ -21,6 +20,7 @@ if (isset($_POST['sendbudget'])) {
         // Fetch all budget entries for the current event
         $sql_show = "SELECT * FROM `budget` WHERE eventname = '$name'";
         $res = mysqli_query($conn, $sql_show);
+
 
         // Check if there are any entries
         if (mysqli_num_rows($res) == 1) {
@@ -51,6 +51,7 @@ if (isset($_POST['sendbudget'])) {
         echo "Error: " . mysqli_error($conn);
     }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -185,7 +186,7 @@ if (isset($_POST['sendbudget'])) {
     <div class="container">
         <h2>Budget Section</h2>
         <h2>Activity :
-            <?php echo "$name" ?>
+            <?php echo $actname ?>
         </h2>
         <form id="activityForm" action="budget.php" method="POST">
             <div class="form-group">
@@ -215,6 +216,7 @@ if (isset($_POST['sendbudget'])) {
                     </thead>
                     <tbody>
                         <?php
+
                         $count = 1;
                         while ($show = mysqli_fetch_array($res)) {
                             echo "<tr>";
@@ -226,6 +228,7 @@ if (isset($_POST['sendbudget'])) {
                             echo "</tr>";
                             $count++;
                         }
+
 
 
                         ?>

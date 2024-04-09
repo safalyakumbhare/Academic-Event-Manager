@@ -9,6 +9,9 @@ include ("header.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Activity Proposal Form</title>
     <style>
+        *{
+            box-sizing: border-box;
+        }
         body {
             font-family: Arial, sans-serif;
             background-color: aliceblue;
@@ -59,14 +62,19 @@ include ("header.php");
             background-color: #4caf50;
             color: #fff;
             padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
+            /* border: none; */
+            border-radius: 10px;
+            border: 5px solid #4caf50;
             cursor: pointer;
             font-size: 16px;
+            transition: .3s ease;
         }
 
         #submit:hover {
-            background-color: #45a049;
+            color:#4caf50;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px 7px #4caf50;
+            
         }
 
         .checkbox-group {
@@ -89,6 +97,91 @@ include ("header.php");
             height: 10vw;
             border: 1px solid #ccc;
             border-radius: 5px;
+        }
+
+        /* Customize the label (the checkbox-btn) */
+        .checkbox-btn {
+            display: block;
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Hide the browser's default checkbox */
+        .checkbox-btn input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        .checkbox-btn label {
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        /* Create a custom checkbox */
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-top: 2px;
+            height: 17px;
+            width: 18px;
+            border: 2px solid black;
+            transition: .2s linear;
+        }
+
+        .checkbox-btn input:checked~.checkmark {
+            background-color: transparent;
+        }
+
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            visibility: hidden;
+            opacity: 0;
+            left: 50%;
+            top: 40%;
+            width: 10px;
+            height: 14px;
+            border: 2px solid #0ea021;
+            filter: drop-shadow(0px 0px 10px #0ea021);
+            border-width: 0 2.5px 2.5px 0;
+            transition: .2s linear;
+            transform: translate(-50%, -50%) rotate(-90deg) scale(0.2);
+        }
+
+        /* Show the checkmark when checked */
+        .checkbox-btn input:checked~.checkmark:after {
+            visibility: visible;
+            opacity: 1;
+            transform: translate(-50%, -50%) rotate(0deg) scale(1);
+            animation: pulse 1s ease-in;
+        }
+
+        .checkbox-btn input:checked~.checkmark {
+            transform: rotate(45deg);
+            border: none;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: translate(-50%, -50%) rotate(0deg) scale(1);
+            }
+
+            50% {
+                transform: translate(-50%, -50%) rotate(0deg) scale(1.6);
+            }
         }
     </style>
 </head>
@@ -127,44 +220,37 @@ include ("header.php");
             </div>
             <label for="req">Requirements : </label>
             <div class="checkbox-group">
-                <label for="ground">Ground</label>
-                <input type="checkbox" id="ground" name="ground" value="Ground" />
-                <label for="sportsRoom">Sports Room</label>
-                <input type="checkbox" id="sportsRoom" name="sportroom" value="Sports Room" />
-                <label for="auditorium">Auditorium</label>
-                <input type="checkbox" id="auditorium" name="auditorium" value="Auditorium" />
-                <label for="soundSystem">Sound System</label>
-                <input type="checkbox" id="soundSystem" name="sound" value="Sound System" />
-                <label for="photography">Photography</label>
-                <input type="checkbox" id="photography" name="photo" value="Photography" />
-                <label for="video">Video</label>
-                <input type="checkbox" id="video" name="video" value="Video" />
+                <label class="checkbox-btn">
+                    <label for="checkbox">Ground</label>
+                    <input type="checkbox" id="checkbox" name="ground" value="Ground" />
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-btn">
+                    <label for="checkbox">Sports Room</label>
+                    <input type="checkbox" id="checkbox" name="sportroom" value="Sports Room" />
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-btn">
+                    <label for="checkbox">Auditorium</label>
+                    <input type="checkbox" id="checkbox" name="auditorium" value="Auditorium" />
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-btn">
+                    <label for="checkbox">Sound System</label>
+                    <input type="checkbox" id="checkbox" name="sound" value="Sound System" />
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-btn">
+                    <label for="checkbox">Photography</label>
+                    <input type="checkbox" id="checkbox" name="photo" value="Photography" />
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-btn">
+                    <label for="checkbox">Video</label>
+                    <input type="checkbox" id="checkbox" name="video" value="Video" />
+                    <span class="checkmark"></span>
+                </label>
             </div>
-
-
-            <!-- <label for="budget">Budget :
-            </label>
-
-            <label for="particular">Particular : </label>
-            <input type="text" id="particular" name="particular" />
-            <label for="price">Price : </label>
-            <input type="text" id="price" name="price" />
-            <label for="quantity">Quantity : </label>
-            <input type="text" id="quantity" name="quantity" />
-
-            <input type="submit" name="sheet" id="sheet" value="Add to Sheet">
-
-            <table border=1>
-                <thead>
-                    <tr>
-                        <th>Sr No.</th>
-                        <th>Particular</th>
-                        <th>Price</th>
-                        <th>Qty.</th>
-                        <th>Total</th>
-                    </tr>
-                </thead>
-            </table> -->
 
 
             <input type="submit" id="submit" name="sendact" />
