@@ -220,11 +220,13 @@ include ("header.php");
             </div>
             <label for="req">Requirements : </label>
             <div class="checkbox-group">
-                <label class="checkbox-btn">
+                
+            <label class="checkbox-btn">
                     <label for="checkbox">Ground</label>
                     <input type="checkbox" id="checkbox" name="ground" value="Ground" />
                     <span class="checkmark"></span>
                 </label>
+                
                 <label class="checkbox-btn">
                     <label for="checkbox">Sports Room</label>
                     <input type="checkbox" id="checkbox" name="sportroom" value="Sports Room" />

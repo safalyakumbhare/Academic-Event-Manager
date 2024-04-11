@@ -20,7 +20,7 @@
       </nav>
     </header>
 
-    <!-- <section class="homepage" id="home"> -->
+    <section class="homepage" id="home">
       <video autoplay loop muted src="event.mp4"></video>
       <a href="loginpage.php">
         <div class="buttons">

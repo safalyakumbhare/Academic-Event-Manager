@@ -1,6 +1,6 @@
 <?php
 include("connection.php");
-// session_start();
+session_start();
 if (isset($_POST['sendact'])) {
     $actname = $_POST['activityName'];
     $actdes = $_POST['activitydes'];
@@ -15,7 +15,7 @@ if (isset($_POST['sendact'])) {
     $result_activity = mysqli_query($conn, $sql_activity);
 
     // Check if the first query was successful before proceeding
-    if ($result_activity >= 1) {
+    if ($result_activity == 1) {
         // Inserting into 'requirement' table
         $ground = isset($_POST['ground']) ? 'YES' : 'NO';
         $sportroom = isset($_POST['sportroom']) ? 'YES' : 'NO';
@@ -28,7 +28,7 @@ if (isset($_POST['sendact'])) {
         $sql_requirement = "INSERT INTO `requirement` VALUES ('$actname','$ground','$sportroom','$auditorium','$sound','$photo','$video','$startdate','$enddate')";
         $result_requirement = mysqli_query($conn, $sql_requirement);
 
-        if ($result_requirement >= 1) {
+        if ($result_requirement == 1) {
             echo "<script>alert('Activity Recorded. Now Go to Budget Section')</script>";
             include("budget.php");
         } else {
