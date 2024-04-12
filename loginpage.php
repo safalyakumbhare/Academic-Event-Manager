@@ -30,17 +30,38 @@ include ("connection.php")
                     <input type="text" id="user" name="user" required>
                 </div>
                 <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="pass" name="pass" required>
+                    <label for="pass">Password</label>
+                    <div class="password-container">
+                        <input type="password" id="pass" name="pass" required>
+                        <span id="togglePassword" class="icon-eye">&#128065;</span>
+                        <!-- Unicode character for eye icon -->
+                    </div>
                 </div>
+
                 <div class="btn-group">
-                    <button type="submit" class="btn login" id="btn" name="submit" >Login</button>
+                    <button type="submit" class="btn login" id="btn" name="submit">Login</button>
                     <button type="reset" class="btn reset" name="reset" id="btn">Reset</button>
 
                 </div>
             </form>
         </div>
     </div>
+
+
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#pass');
+
+        togglePassword.addEventListener('click', function () {
+            // Toggle between password and text input type
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+
+            // Optionally, change the icon based on visibility state (e.g., eye-open and eye-closed)
+            togglePassword.textContent = type === 'password' ? '👁️' : '👁️‍🗨️';
+        });
+    </script>
+
 </body>
 
 </html>

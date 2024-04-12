@@ -163,3 +163,18 @@ h2 {
     transform: rotateY(360deg);
   }
 }
+
+/* Styling the password container */
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Styling the eye icon */
+.icon-eye {
+  position: absolute;
+  right: 10px; /* Position the icon to the right of the input field */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  font-size: 1.2em; /* Adjust the icon size */
+}
