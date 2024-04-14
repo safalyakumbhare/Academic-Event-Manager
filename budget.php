@@ -1,7 +1,9 @@
 <?php
-include("header.php");
-require_once("connection.php");
+// Include necessary files
+include ("header.php");
+require_once ("connection.php");
 
+// Check if the 'sendbudget' form is submitted
 if (isset($_POST['sendbudget'])) {
     // Get user input data
     $name = $_SESSION['actname'];
@@ -13,7 +15,7 @@ if (isset($_POST['sendbudget'])) {
     // Prepare a statement to insert data into the database
     $stmt = $conn->prepare("INSERT INTO `budget` (eventname, particular, amount, qty, total) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("ssddd", $name, $particular, $price, $qty, $total);
-    
+
     // Execute the statement and check if successful
     if ($stmt->execute()) {
         // Query the database for budget entries for the current event
@@ -24,12 +26,35 @@ if (isset($_POST['sendbudget'])) {
     } else {
         echo "Error: " . $stmt->error;
     }
-    
+
+    // Close statements
     $stmt->close();
     $stmt_show->close();
 }
 
+// // Check if the 'sendgross' form is submitted
+// if (isset($_POST['sendgross'])) {
+//     // Calculate the gross total
+//     $gross_total = $_POST['gross_total'];
+
+//     // Prepare the statement to insert gross total into the database
+//     $stmt_gross = $conn->prepare("INSERT INTO `gross` (name,total) VALUES (?, ?)");
+//     $stmt_gross->bind_param("sd", $name, $gross_total);
+
+//     // Execute the statement and check if successful
+//     if ($stmt_gross->execute()) {
+//         // Redirect to the home page after successful insertion
+//         header("Location: HomeFaculty.php");
+//         exit();
+//     } else {
+//         echo "Error in sending gross: " . $stmt_gross->error;
+//     }
+
+//     // Close statement
+//     $stmt_gross->close();
+// }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -92,7 +117,18 @@ if (isset($_POST['sendbudget'])) {
             </table>
             <div class="gross-total">
                 <span>Gross Total:</span>
-                <span id="gross-total-value"><?php echo number_format($gross_total, 2); ?></span>
+                <span id="gross-total-value"><?php $gross_total = number_format($gross_total, 2);
+                echo $gross_total;
+                // $_POST['gross_total']= $gross_total;
+                
+                
+
+                ?>
+                    <!-- <form action="budget.php" method="POST">
+                        <input type="submit" id="submit" value="Submit Budget" name="sendgross" />
+                    </form> -->
+
+                </span>
             </div>
         </div>
     </div>
