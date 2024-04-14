@@ -87,7 +87,7 @@ $res = mysqli_query($conn, $sql);
             <?php
             while ($data = mysqli_fetch_assoc($res)) {
                 echo '<div class="event">';
-                echo '<h3>' . htmlspecialchars($data['name'], ENT_QUOTES, 'UTF-8') . '</h3>';
+                echo '<h3>Event Name : ' . htmlspecialchars($data['name'], ENT_QUOTES, 'UTF-8') . '</h3>';
                 echo '<p><b>Date:</b> ' . htmlspecialchars($data['datefrom'], ENT_QUOTES, 'UTF-8') . '</p>';
                 echo '<p><b>Organized By:</b> ' . htmlspecialchars($data['orgby'], ENT_QUOTES, 'UTF-8') . '</p>';
                 echo '<p><b>Approval Status:</b> ' . htmlspecialchars($data['sendtohod'], ENT_QUOTES, 'UTF-8') . '</p>';
