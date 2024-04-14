@@ -222,34 +222,34 @@ include ("header.php");
             <div class="checkbox-group">
                 
             <label class="checkbox-btn">
-                    <label for="checkbox">Ground</label>
-                    <input type="checkbox" id="checkbox" name="ground" value="Ground" />
+                    <label for="ground">Ground</label>
+                    <input type="checkbox" id="ground" name="ground" value="Ground" />
                     <span class="checkmark"></span>
                 </label>
                 
                 <label class="checkbox-btn">
-                    <label for="checkbox">Sports Room</label>
-                    <input type="checkbox" id="checkbox" name="sportroom" value="Sports Room" />
+                    <label for="sportroom">Sports Room</label>
+                    <input type="checkbox" id="sportroom" name="sportroom" value="Sports Room" />
                     <span class="checkmark"></span>
                 </label>
                 <label class="checkbox-btn">
-                    <label for="checkbox">Auditorium</label>
-                    <input type="checkbox" id="checkbox" name="auditorium" value="Auditorium" />
+                    <label for="audi">Auditorium</label>
+                    <input type="checkbox" id="audi" name="auditorium" value="Auditorium" />
                     <span class="checkmark"></span>
                 </label>
                 <label class="checkbox-btn">
-                    <label for="checkbox">Sound System</label>
-                    <input type="checkbox" id="checkbox" name="sound" value="Sound System" />
+                    <label for="sound">Sound System</label>
+                    <input type="checkbox" id="sound" name="sound" value="Sound System" />
                     <span class="checkmark"></span>
                 </label>
                 <label class="checkbox-btn">
-                    <label for="checkbox">Photography</label>
-                    <input type="checkbox" id="checkbox" name="photo" value="Photography" />
+                    <label for="photo">Photography</label>
+                    <input type="checkbox" id="photo" name="photo" value="Photography" />
                     <span class="checkmark"></span>
                 </label>
                 <label class="checkbox-btn">
-                    <label for="checkbox">Video</label>
-                    <input type="checkbox" id="checkbox" name="video" value="Video" />
+                    <label for="video">Video</label>
+                    <input type="checkbox" id="video" name="video" value="Video" />
                     <span class="checkmark"></span>
                 </label>
             </div>
