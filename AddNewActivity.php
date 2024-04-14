@@ -11,7 +11,7 @@ if (isset($_POST['sendact'])) {
     $orgby = $_POST['organizer'];
     $_SESSION['actname'] =  $actname;
     // First SQL Query for inserting into 'activity' table
-    $sql_activity = "INSERT INTO `activity` VALUES ('$actname','$actdes','$startdate','$enddate','$place','$time','$orgby','YES')";
+    $sql_activity = "INSERT INTO `activity` VALUES ('$actname','$actdes','$startdate','$enddate','$place','$time','$orgby','Pending')";
     $result_activity = mysqli_query($conn, $sql_activity);
 
     // Check if the first query was successful before proceeding

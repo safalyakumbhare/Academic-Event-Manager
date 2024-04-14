@@ -37,7 +37,7 @@ include ("header.php");
     </button>
    
     <button class="bttn">
-      <a href="#">
+      <a href="ShowEvent.php">
         <div class="box hover-box" id="new-faculty">
           <div class="content">
 
