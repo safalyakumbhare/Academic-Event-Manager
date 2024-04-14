@@ -97,11 +97,11 @@
     </section>
 
     <section class="about" id="about">
-      <h2>About Us</h2>
-      <p>Discover our story in providing camping services.</p>
+      <h2>Our Featuers</h2>
+      <p>Provide You the seamless Management of the event</p>
       <div class="row company-info">
         <h3>Our Story</h3>
-        <p> academic events are more than just gatherings; they're milestones in our journey of knowledge and growth.
+        <p> academic events are more than just gatherings they're milestones in our journey of knowledge and growth.
           From
           engaging lectures to dynamic seminars, our events foster intellectual curiosity and collaboration among
           students, faculty, and experts alike. We take pride in curating enriching experiences that inspire learning
