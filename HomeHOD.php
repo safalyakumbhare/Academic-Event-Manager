@@ -31,11 +31,11 @@ include ("header.php");
       </a>
     </button>
     <button class="bttn">
-      <a href="#">
+      <a href="Approvehod.php">
         <div class="box hover-box" id="new-faculty">
           <div class="content">
 
-            <h2>Show Events</h2>
+            <h2>Approve Events</h2>
             <p>Show Approval Status and Upcoming Events</p>
 
           </div>
