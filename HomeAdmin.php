@@ -68,7 +68,18 @@ include ("header.php");
         </div>
       </a>
     </button>
+    <button class="bttn">
+      <a href="ShowEvent.php">
+        <div class="box hover-box" id="new-faculty">
+          <div class="content">
 
+            <h2>Upcoming Events</h2>
+            <p>Monitor all the Upcoming Events</p>
+
+          </div>
+        </div>
+      </a>
+    </button>
   </div>
 </body>
 
