@@ -47,7 +47,7 @@ include ("connection.php");
             // Set checkbox states based on requirement data
             $ground_checked = ($row_req['ground'] == 'YES') ? 'checked' : '';
             $sportroom_checked = ($row_req['sport'] == 'YES') ? 'checked' : '';
-            $audi_checked = ($row_req['audio'] == 'YES') ? 'checked' : '';
+            $audi_checked = ($row_req['auditorium'] == 'YES') ? 'checked' : '';
             $sound_checked = ($row_req['sound'] == 'YES') ? 'checked' : '';
             $photo_checked = ($row_req['photo'] == 'YES') ? 'checked' : '';
             $video_checked = ($row_req['video'] == 'YES') ? 'checked' : '';
