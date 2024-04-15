@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS `requirement`(
     `eventname`  VARCHAR(30),
     `ground` VARCHAR(3),
     `sport` VARCHAR(3),
-    `audio` VARCHAR(3),
+    `auditorium` VARCHAR(3),
     `sound` VARCHAR(3),
     `photo` VARCHAR(3),
     `video` VARCHAR(3),

@@ -101,7 +101,7 @@ $num_events = mysqli_num_rows($res);
                     echo '<h3>Event Name : ' . htmlspecialchars($data['name'], ENT_QUOTES, 'UTF-8') . '</h3>';
                     echo '<p><b>Date:</b> ' . htmlspecialchars($data['datefrom'], ENT_QUOTES, 'UTF-8') . '</p>';
                     echo '<p><b>Organized By:</b> ' . htmlspecialchars($data['orgby'], ENT_QUOTES, 'UTF-8') . '</p>';
-                    echo '<p><b>Approval Status:</b> ' . htmlspecialchars($data['sendtohod'], ENT_QUOTES, 'UTF-8') . '</p>';
+                    echo '<p><b>Approval Status:</b> ' . htmlspecialchars($data['approval'], ENT_QUOTES, 'UTF-8') . '</p>';
                     echo '</div>';
                 }
             }
