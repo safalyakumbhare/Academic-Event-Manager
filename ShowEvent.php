@@ -5,7 +5,10 @@ include("connection.php");
 $sql = "SELECT * FROM `activity`";
 $res = mysqli_query($conn, $sql);
 
+// Check if there are any events
+$num_events = mysqli_num_rows($res);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,12 +51,10 @@ $res = mysqli_query($conn, $sql);
         }
 
         .event h3{
-            /* margin-top: 0; */
             padding: 5px;
         }
         .event p{
             padding: 5px;
-
         }
 
         .button-container {
@@ -83,16 +84,26 @@ $res = mysqli_query($conn, $sql);
 <body>
 
     <div class="container">
-        <h2>Upcoming Events</h2>
+        <h2>
+            <?php
+            if ($num_events > 0) {
+                echo 'Upcoming Events';
+            } else {
+                echo 'There are no events scheduled';
+            }
+            ?>
+        </h2>
         <div id="event-list">
             <?php
-            while ($data = mysqli_fetch_assoc($res)) {
-                echo '<div class="event">';
-                echo '<h3>Event Name : ' . htmlspecialchars($data['name'], ENT_QUOTES, 'UTF-8') . '</h3>';
-                echo '<p><b>Date:</b> ' . htmlspecialchars($data['datefrom'], ENT_QUOTES, 'UTF-8') . '</p>';
-                echo '<p><b>Organized By:</b> ' . htmlspecialchars($data['orgby'], ENT_QUOTES, 'UTF-8') . '</p>';
-                echo '<p><b>Approval Status:</b> ' . htmlspecialchars($data['sendtohod'], ENT_QUOTES, 'UTF-8') . '</p>';
-                echo '</div>';
+            if ($num_events > 0) {
+                while ($data = mysqli_fetch_assoc($res)) {
+                    echo '<div class="event">';
+                    echo '<h3>Event Name : ' . htmlspecialchars($data['name'], ENT_QUOTES, 'UTF-8') . '</h3>';
+                    echo '<p><b>Date:</b> ' . htmlspecialchars($data['datefrom'], ENT_QUOTES, 'UTF-8') . '</p>';
+                    echo '<p><b>Organized By:</b> ' . htmlspecialchars($data['orgby'], ENT_QUOTES, 'UTF-8') . '</p>';
+                    echo '<p><b>Approval Status:</b> ' . htmlspecialchars($data['sendtohod'], ENT_QUOTES, 'UTF-8') . '</p>';
+                    echo '</div>';
+                }
             }
             ?>
         </div>
