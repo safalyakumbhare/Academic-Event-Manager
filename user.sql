@@ -20,8 +20,8 @@ CREATE TABLE  IF NOT EXISTS `activity` (
     `place` VARCHAR(30),
     `time` TIME,
     `orgby` VARCHAR(30),
-    `sendtohod` VARCHAR(10),
-    `dept`  VARCHAR(30),
+    `approval` VARCHAR(10),
+    
 );
 
 CREATE TABLE IF NOT EXISTS `requirement`(
