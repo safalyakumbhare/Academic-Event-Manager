@@ -20,6 +20,7 @@ $res = mysqli_query($conn, $sql);
             margin: 0;
             padding: 0;
             color:#000000 !important;
+            background-color: aliceblue;
         }
 
         header {
