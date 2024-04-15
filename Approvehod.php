@@ -92,7 +92,7 @@ include ("connection.php");
                 <label for="activity">Select Activity:</label>
                 <?php
                 // Display a dropdown with activities
-                $sql = "SELECT name FROM activity ORDER BY name";
+                $sql = "SELECT name FROM activity WHERE approval='Pending'";
                 echo "<select name='activity' required>";
                 echo "<option value=''>Select</option>";
                 foreach ($conn->query($sql) as $row) {
@@ -176,7 +176,7 @@ include ("connection.php");
             <table>
                 <thead>
                     <tr>
-                        <th>SnNo</th>
+                        <th>SrNo</th>
                         <th>Particular</th>
                         <th>Price</th>
                         <th>Qty</th>

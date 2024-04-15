@@ -15,7 +15,7 @@ if (isset($_POST['sendact'])) {
     // Convert user input requirements to a list of required values
     $requiredRequirements = [];
     if (isset($_POST['ground'])) $requiredRequirements[] = 'ground';
-    if (isset($_POST['sportroom'])) $requiredRequirements[] = 'sportroom';
+    if (isset($_POST['sportroom'])) $requiredRequirements[] = 'sport';
     if (isset($_POST['auditorium'])) $requiredRequirements[] = 'auditorium';
     if (isset($_POST['sound'])) $requiredRequirements[] = 'sound';
     if (isset($_POST['photo'])) $requiredRequirements[] = 'photo';
