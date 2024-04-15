@@ -45,12 +45,12 @@ include ("header.php");
       </a>
     </button>
     <button class="bttn">
-      <a href="#">
+      <a href="Approveadmin.php">
         <div class="box hover-box" id="new-faculty">
           <div class="content">
 
-            <h2>Show Event</h2>
-            <p>See latest Event Status</p>
+            <h2>Approve Event</h2>
+            <p>Approve Requested Events</p>
 
           </div>
         </div>
