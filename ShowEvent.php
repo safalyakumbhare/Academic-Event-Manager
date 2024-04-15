@@ -1,8 +1,8 @@
 <?php
-include("header.php");
-include("connection.php");
+include ("header.php");
+include ("connection.php");
 
-$sql = "SELECT * FROM `activity`";
+$sql = "SELECT * FROM `activity` ORDER BY `datefrom`";
 $res = mysqli_query($conn, $sql);
 
 // Check if there are any events
@@ -22,7 +22,7 @@ $num_events = mysqli_num_rows($res);
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            color:#000000 !important;
+            color: #000000 !important;
             background-color: aliceblue;
         }
 
@@ -50,10 +50,11 @@ $num_events = mysqli_num_rows($res);
             margin: 2vw;
         }
 
-        .event h3{
+        .event h3 {
             padding: 5px;
         }
-        .event p{
+
+        .event p {
             padding: 5px;
         }
 
@@ -99,12 +100,19 @@ $num_events = mysqli_num_rows($res);
                 while ($data = mysqli_fetch_assoc($res)) {
                     echo '<div class="event">';
                     echo '<h3>Event Name : ' . htmlspecialchars($data['name'], ENT_QUOTES, 'UTF-8') . '</h3>';
-                    echo '<p><b>Date:</b> ' . htmlspecialchars($data['datefrom'], ENT_QUOTES, 'UTF-8') . '</p>';
-                    echo '<p><b>Organized By:</b> ' . htmlspecialchars($data['orgby'], ENT_QUOTES, 'UTF-8') . '</p>';
-                    echo '<p><b>Approval Status:</b> ' . htmlspecialchars($data['approval'], ENT_QUOTES, 'UTF-8') . '</p>';
+
+                    // Format the date to d-m-y
+                    $dateFormatted = date('d-m-y', strtotime($data['datefrom']));
+                    $dateFormatted1 = date('d-m-y', strtotime($data['dateto']));
+                    echo '<p><b>Starting Date : </b> ' . htmlspecialchars($dateFormatted, ENT_QUOTES, 'UTF-8') . '</p>';
+                    echo '<p><b>End Date : </b> ' . htmlspecialchars($dateFormatted1, ENT_QUOTES, 'UTF-8') . '</p>';
+
+                    echo '<p><b>Organized By : </b> ' . htmlspecialchars($data['orgby'], ENT_QUOTES, 'UTF-8') . '</p>';
+                    echo '<p><b>Approval Status : </b> ' . htmlspecialchars($data['approval'], ENT_QUOTES, 'UTF-8') . '</p>';
                     echo '</div>';
                 }
             }
+
             ?>
         </div>
     </div>
