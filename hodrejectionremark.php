@@ -1,5 +1,23 @@
 <?php
 include ("header.php");
+
+include("connection.php");
+include("Approvehod.php");
+$ename = $_SESSION["activity"];
+
+if(isset($_POST['revise'])){
+    $remark = $_POST['remark'];
+    $sql = "INSERT INTO `hodapprove` VALUES ('$ename','$remark')"; 
+    $res = mysqli_query($conn,$sql);
+
+    if($res){
+        echo "<script>alert('Remark Added Successfully');</script>";
+
+    }
+    else{
+        echo  mysqli_error($conn);
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,13 +32,13 @@ include ("header.php");
 <body>
     <div class="container">
         <h2>Rejection Remark Form</h2>
-        <form id="activityForm" action="AddNewActivity.php" method="POST">
+        <form id="activityForm" method="POST">
             <div class="form-group">
-                <label for="activityName">Enter Remark for Rejection:</label>
-                <input type="text" id="activityName" name="activityName" required />
+                <label for="remark">Enter Remark for Rejection:</label>
+                <input type="text" id="remark" name="remark" required />
             </div>
             
-            <input type="submit" id="submit" name="sendact" />
+            <center><input type="submit" id="submit" name="revise" /></center>
 
 
         </form>

@@ -44,3 +44,8 @@ CREATE TABLE IF NOT EXISTS `budget`(
     `qty`  INT,
     `total` DECIMAL
 );
+
+CREATE TABLE IN NOT EXISTS `hodapprove`(
+    `eventname` VARCHAR(30),
+    `revise` VARCHAR(50)
+);
