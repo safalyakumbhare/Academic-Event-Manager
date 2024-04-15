@@ -45,13 +45,13 @@ include ("header.php");
             </div>
             <label for="req">Requirements : </label>
             <div class="checkbox-group">
-                
-            <label class="checkbox-btn">
+
+                <label class="checkbox-btn">
                     <label for="ground">Ground</label>
                     <input type="checkbox" id="ground" name="ground" value="Ground" />
                     <span class="checkmark"></span>
                 </label>
-                
+
                 <label class="checkbox-btn">
                     <label for="sportroom">Sports Room</label>
                     <input type="checkbox" id="sportroom" name="sportroom" value="Sports Room" />

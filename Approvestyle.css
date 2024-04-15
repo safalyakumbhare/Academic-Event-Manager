@@ -52,13 +52,16 @@ input[type="checkbox"] {
     margin: 1vw;
     background-color: #4caf50;
     color: #fff;
-    padding: 10px 20px;
-    /* border: none; */
+    height: 6vh;
+    width: 35vw;
+    /* padding: 10px 20px; */
+    border: none;
     border-radius: 10px;
-    border: 5px solid #4caf50;
+    /* border: 5px solid #4caf50; */
     cursor: pointer;
     font-size: 16px;
     transition: .3s ease;
+
 }
 
 #submit:hover {
@@ -67,7 +70,28 @@ input[type="checkbox"] {
     box-shadow: 0px 0px 10px 7px #4caf50;
 
 }
+#rsubmit {
+    margin: 1vw;
+    background-color: red;
+    color: #fff;
+    height: 6vh;
+    width: 35vw;
+    /* padding: 10px 20px; */
+    border: none;
+    border-radius: 10px;
+    /* border: 5px solid #4caf50; */
+    cursor: pointer;
+    font-size: 16px;
+    transition: .3s ease;
 
+}
+
+#rsubmit:hover {
+    color: red;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 7px red;
+
+}
 .checkbox-group {
     margin-bottom: 20px;
     display: flex;

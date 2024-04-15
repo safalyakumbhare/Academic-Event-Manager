@@ -16,9 +16,14 @@ include ("connection.php");
 
 <body>
     <?php
+
     // Initialize variables
     $eventname = $des = $startdate = $enddate = $place = $time = $orgby = "";
     $ground_checked = $sportroom_checked = $audi_checked = $sound_checked = $photo_checked = $video_checked = "";
+    $budget_res = null;
+    
+    // Variable to store event name for the hidden input
+    $ename = "";
 
     if (isset($_POST['show'])) {
         // Retrieve the selected event
@@ -51,15 +56,31 @@ include ("connection.php");
             $sound_checked = ($row_req['sound'] == 'YES') ? 'checked' : '';
             $photo_checked = ($row_req['photo'] == 'YES') ? 'checked' : '';
             $video_checked = ($row_req['video'] == 'YES') ? 'checked' : '';
-            $budget = "SELECT * FROM  budget WHERE eventname = '$ename'";
-            $res = mysqli_query($conn, $budget);
+            
+            $budget_query = "SELECT * FROM budget WHERE eventname = '$ename'";
+            $budget_res = $conn->query($budget_query);
         } else {
             echo "Error fetching requirement data: " . $conn->error;
         }
     }
 
+    if (isset($_POST['approve'])) {
+        // Approve the selected activity
+        $ename = $_POST['ename'];
+        
+        $sql = "UPDATE `activity` SET `approval` = 'Approved by HOD' WHERE name = '$ename'";
+        $res = $conn->query($sql);
 
-
+        if ($res) {
+            echo "<script>alert('Activity Approved');</script>";
+        } else {
+            echo "<script>alert('Error in approving activity');</script>";
+        }
+    }
+    if(isset($_POST["reject"])){
+        // Reject the selected activity
+        header("Location:hodrejectionremark.php");
+    }
     ?>
 
     <div class="container">
@@ -84,9 +105,9 @@ include ("connection.php");
         </form>
 
         <!-- Form to display and modify the selected activity -->
-        <form method="POST" action="save_approval.php">
+        <form method="POST">
             <!-- Hidden field to store the event name -->
-            <input type="hidden" name="ename" value="<?php echo htmlspecialchars($eventname); ?>">
+            <input type="hidden" name="ename" value="<?php echo htmlspecialchars($ename); ?>">
 
             <div class="form-group">
                 <label for="activityName">Activity Description:</label>
@@ -95,14 +116,12 @@ include ("connection.php");
 
             <div class="form-group">
                 <label for="startDate">Start Date:</label>
-                <input type="text" id="startDate" name="startDate" readonly
-                    value="<?php echo htmlspecialchars($startdate); ?>">
+                <input type="text" id="startDate" name="startDate" readonly value="<?php echo htmlspecialchars($startdate); ?>">
             </div>
 
             <div class="form-group">
                 <label for="endDate">End Date:</label>
-                <input type="text" id="endDate" name="endDate" readonly
-                    value="<?php echo htmlspecialchars($enddate); ?>">
+                <input type="text" id="endDate" name="endDate" readonly value="<?php echo htmlspecialchars($enddate); ?>">
             </div>
 
             <div class="form-group">
@@ -117,13 +136,11 @@ include ("connection.php");
 
             <div class="form-group">
                 <label for="organizer">Organized by:</label>
-                <input type="text" id="organizer" name="organizer" readonly
-                    value="<?php echo htmlspecialchars($orgby); ?>">
+                <input type="text" id="organizer" name="organizer" readonly value="<?php echo htmlspecialchars($orgby); ?>">
             </div>
 
             <label for="req">Requirements:</label>
             <div class="checkbox-group">
-
                 <label class="checkbox-btn">
                     <input type="checkbox" id="ground" name="ground" value="yes" <?php echo $ground_checked; ?>>
                     <label for="ground">Ground</label>
@@ -155,8 +172,7 @@ include ("connection.php");
                 </label>
             </div>
 
-            
-                <label for="budget">Budget:</label>
+            <label for="budget">Budget:</label>
             <table>
                 <thead>
                     <tr>
@@ -171,22 +187,29 @@ include ("connection.php");
                     <?php
                     $count = 1;
                     $gross_total = 0;
-                    while ($row = $res->fetch_assoc()) {
-                        echo "<tr>";
-                        echo "<td>" . $count . "</td>";
-                        echo "<td>" . htmlspecialchars($row['particular']) . "</td>";
-                        echo "<td>" . number_format($row['amount'], 2) . "</td>";
-                        echo "<td>" . $row['qty'] . "</td>";
-                        echo "<td>" . number_format($row['total'], 2) . "</td>";
-                        echo "</tr>";
-                        $count++;
-                        $gross_total += $row['total'];
+                    if ($budget_res) {
+                        while ($row = $budget_res->fetch_assoc()) {
+                            echo "<tr>";
+                            echo "<td>" . $count . "</td>";
+                            echo "<td>" . htmlspecialchars($row['particular']) . "</td>";
+                            echo "<td>" . number_format($row['amount'], 2) . "</td>";
+                            echo "<td>" . $row['qty'] . "</td>";
+                            echo "<td>" . number_format($row['total'], 2) . "</td>";
+                            echo "</tr>";
+                            $count++;
+                            $gross_total += $row['total'];
+                        }
                     }
                     ?>
                 </tbody>
             </table>
-            <!-- Add submit button to save approval if necessary -->
-            <input type="submit" value="Save" id="submit" name="save" />
+
+            <center>
+                <input type="submit" value="Approve" id="submit" name="approve" />
+                <input type="submit" value="Reject" id="rsubmit" name="reject" />
+            </center>
+        
+
         </form>
     </div>
 </body>
