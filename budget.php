@@ -115,22 +115,23 @@ if (isset($_POST['sendbudget'])) {
                     ?>
                 </tbody>
             </table>
-            <div class="gross-total">
-                <span>Gross Total:</span>
-                <span id="gross-total-value"><?php $gross_total = number_format($gross_total, 2);
-                echo $gross_total;
-                // $_POST['gross_total']= $gross_total;
-                
-                
+        </div>
+        <div class="gross-total">
+            <span>Gross Total:</span>
+            <span id="gross-total-value"><?php $gross_total = number_format($gross_total, 2);
+            echo $gross_total;
+            // $_POST['gross_total']= $gross_total;
+            
 
-                ?>
-                    <!-- <form action="budget.php" method="POST">
+
+            ?>
+                <!-- <form action="budget.php" method="POST">
                         <input type="submit" id="submit" value="Submit Budget" name="sendgross" />
                     </form> -->
 
-                </span>
-            </div>
+            </span>
         </div>
+    </div>
     </div>
 </body>
 

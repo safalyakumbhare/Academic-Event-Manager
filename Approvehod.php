@@ -11,98 +11,7 @@ include ("connection.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOD Approval Form</title>
-    <style>
-        *{
-    box-sizing: border-box;
-}
-body {
-    font-family: Arial, sans-serif;
-    background-color: aliceblue;
-    /* margin: 0 */
-}
-
-.container {
-    width: 80vw;
-    margin: 50px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="date"],
-input[type="time"],
-select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    margin-top: 5px;
-    font-size: 16px;
-}
-
-input[type="checkbox"] {
-    margin-right: 5px;
-}
-
-#submit {
-    margin:1vw;
-    background-color: #4caf50;
-    color: #fff;
-    padding: 10px 20px;
-    /* border: none; */
-    border-radius: 10px;
-    border: 5px solid #4caf50;
-    cursor: pointer;
-    font-size: 16px;
-    transition: .3s ease;
-}
-
-#submit:hover {
-    color:#4caf50;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px 7px #4caf50;
-    
-}
-
-.checkbox-group {
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.checkbox-group input[type="checkbox"] {
-    margin: 20px;
-}
-
-fieldset {
-    width: 30vw;
-}
-
-#activitydes {
-    width: 100%;
-    height: 10vw;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-    </style>
+    <link rel="stylesheet" href="Approvestyle.css">
 </head>
 
 <body>
@@ -142,10 +51,15 @@ fieldset {
             $sound_checked = ($row_req['sound'] == 'YES') ? 'checked' : '';
             $photo_checked = ($row_req['photo'] == 'YES') ? 'checked' : '';
             $video_checked = ($row_req['video'] == 'YES') ? 'checked' : '';
+            $budget = "SELECT * FROM  budget WHERE eventname = '$ename'";
+            $res = mysqli_query($conn, $budget);
         } else {
             echo "Error fetching requirement data: " . $conn->error;
         }
     }
+
+
+
     ?>
 
     <div class="container">
@@ -181,12 +95,14 @@ fieldset {
 
             <div class="form-group">
                 <label for="startDate">Start Date:</label>
-                <input type="text" id="startDate" name="startDate" readonly value="<?php echo htmlspecialchars($startdate); ?>">
+                <input type="text" id="startDate" name="startDate" readonly
+                    value="<?php echo htmlspecialchars($startdate); ?>">
             </div>
 
             <div class="form-group">
                 <label for="endDate">End Date:</label>
-                <input type="text" id="endDate" name="endDate" readonly value="<?php echo htmlspecialchars($enddate); ?>">
+                <input type="text" id="endDate" name="endDate" readonly
+                    value="<?php echo htmlspecialchars($enddate); ?>">
             </div>
 
             <div class="form-group">
@@ -201,7 +117,8 @@ fieldset {
 
             <div class="form-group">
                 <label for="organizer">Organized by:</label>
-                <input type="text" id="organizer" name="organizer" readonly value="<?php echo htmlspecialchars($orgby); ?>">
+                <input type="text" id="organizer" name="organizer" readonly
+                    value="<?php echo htmlspecialchars($orgby); ?>">
             </div>
 
             <label for="req">Requirements:</label>
@@ -238,6 +155,36 @@ fieldset {
                 </label>
             </div>
 
+            
+                <label for="budget">Budget:</label>
+            <table>
+                <thead>
+                    <tr>
+                        <th>SnNo</th>
+                        <th>Particular</th>
+                        <th>Price</th>
+                        <th>Qty</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $count = 1;
+                    $gross_total = 0;
+                    while ($row = $res->fetch_assoc()) {
+                        echo "<tr>";
+                        echo "<td>" . $count . "</td>";
+                        echo "<td>" . htmlspecialchars($row['particular']) . "</td>";
+                        echo "<td>" . number_format($row['amount'], 2) . "</td>";
+                        echo "<td>" . $row['qty'] . "</td>";
+                        echo "<td>" . number_format($row['total'], 2) . "</td>";
+                        echo "</tr>";
+                        $count++;
+                        $gross_total += $row['total'];
+                    }
+                    ?>
+                </tbody>
+            </table>
             <!-- Add submit button to save approval if necessary -->
             <input type="submit" value="Save" id="submit" name="save" />
         </form>
