@@ -32,27 +32,8 @@ if (isset($_POST['sendbudget'])) {
     $stmt_show->close();
 }
 
-// // Check if the 'sendgross' form is submitted
-// if (isset($_POST['sendgross'])) {
-//     // Calculate the gross total
-//     $gross_total = $_POST['gross_total'];
+// Check if the 'sendgross' form is submitted
 
-//     // Prepare the statement to insert gross total into the database
-//     $stmt_gross = $conn->prepare("INSERT INTO `gross` (name,total) VALUES (?, ?)");
-//     $stmt_gross->bind_param("sd", $name, $gross_total);
-
-//     // Execute the statement and check if successful
-//     if ($stmt_gross->execute()) {
-//         // Redirect to the home page after successful insertion
-//         header("Location: HomeFaculty.php");
-//         exit();
-//     } else {
-//         echo "Error in sending gross: " . $stmt_gross->error;
-//     }
-
-//     // Close statement
-//     $stmt_gross->close();
-// }
 ?>
 
 
@@ -125,9 +106,9 @@ if (isset($_POST['sendbudget'])) {
 
 
             ?>
-                <!-- <form action="budget.php" method="POST">
+                <form action="sendbudget.php" method="POST">
                         <input type="submit" id="submit" value="Submit Budget" name="sendgross" />
-                    </form> -->
+                    </form>
 
             </span>
         </div>
