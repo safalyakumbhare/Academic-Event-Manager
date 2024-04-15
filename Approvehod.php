@@ -16,36 +16,17 @@
 
 <body>
     <?php
-    // Include the database connection file
 
-    // Initialize variables
-    $ename = '';
-    $eventname = '';
-    $des = '';
-    $startdate = '';
-    $enddate = '';
-    $place = '';
-    $time = '';
-    $orgby = '';
-
-    // Check if the form is submitted
     if (isset($_POST['show'])) {
-        // Get the selected activity name
         $ename = $_POST['activity'];
-
-        // Prepare the SQL query
         $query = "SELECT * FROM activity WHERE name = '$ename'";
-
-        // Execute the query
         $result = $conn->query($query);
-
-        // Check if the query was successful
         if ($result) {
-            // Fetch the data
+
             $row = $result->fetch_assoc();
             
             if ($row) {
-                // Assign data to variables
+                
                 $eventname = $row['name'];
                 $des = $row['description'];
                 $startdate = $row['datefrom'];
@@ -55,7 +36,7 @@
                 $orgby = $row['orgby'];
             }
         } else {
-            // Handle query error
+
             echo "Error fetching data: " . $conn->error;
         }
     }
@@ -66,18 +47,17 @@
             <div class="form-group">
                 <label for="activity">Select Activity:</label>
                 <?php
-                // Fetch activity options
+   
                 $sql = "SELECT name FROM activity ORDER BY name";
                 echo "<select name='activity' required>";
                 echo "<option value=''>Select</option>";
 
-                // Loop through the activity options and create select options
                 foreach ($conn->query($sql) as $row) {
                     echo "<option value='{$row['name']}'>{$row['name']}</option>";
                 }
                 echo "</select>";
                 ?>
-                <input type="submit" value="Show" name="show">
+                <center><input type="submit" value="Show" id="submit" name="show" /></center>
             </div>
         </form>
         
