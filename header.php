@@ -23,7 +23,7 @@ $name = $res
         <nav>
             <Ul class="heading">
                 <a href="index.php">
-                    <Li class="head">Academic event managment</Li>
+                    <Li class="head">Academic Event Manager</Li>
                 </a>
             </Ul>
             <ul>
