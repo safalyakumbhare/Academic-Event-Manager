@@ -14,7 +14,7 @@ $result = mysqli_query($conn, $sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Staff Report</title>
+    <title>Events Report</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -28,7 +28,7 @@ $result = mysqli_query($conn, $sql);
 
         table {
             width: 98%;
-            /* border-collapse: ; */
+            border-collapse:collapse ;
             margin: 20px auto;
             background-color: white;
         }
