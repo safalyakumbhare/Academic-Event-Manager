@@ -85,15 +85,17 @@ $num_events = mysqli_num_rows($res);
 <body>
 
     <div class="container">
-        <h2>
-            <?php
-            if ($num_events > 0) {
-                echo 'Upcoming Events';
-            } else {
-                echo 'There are no events scheduled';
-            }
-            ?>
-        </h2>
+        <center>
+            <h2>
+                <?php
+                if ($num_events > 0) {
+                    echo 'Upcoming Events';
+                } else {
+                    echo 'There are no events scheduled';
+                }
+                ?>
+            </h2>
+        </center>
         <div id="event-list">
             <?php
             if ($num_events > 0) {

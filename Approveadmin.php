@@ -10,7 +10,7 @@ include ("connection.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOD Approval Form</title>
+    <title>Admin Approval Form</title>
     <link rel="stylesheet" href="Approvestyle.css">
 </head>
 
@@ -78,13 +78,21 @@ include ("connection.php");
         }
     }
     if(isset($_POST["reject"])){
-        // Reject the selected activity
-        header("Location:hodrejectionremark.php");
+        $ename = $_POST['ename'];
+        $_SESSION["activity"] = $ename;
+        $sql = "UPDATE `activity` SET `approval` = 'Rejected By Principal' WHERE name = '$ename'";
+        $res = $conn->query($sql);
+
+        if ($res) {
+            echo "<script>alert('Activity Rejected');</script>";
+        } else {
+            echo "<script>alert('Error in rejecting activity');</script>";
+        }
     }
     ?>
 
     <div class="container">
-        <h2>HOD Approval Form</h2>
+        <h2>Principal Approval Form</h2>
 
         <!-- Form to select an activity -->
         <form method="POST">
