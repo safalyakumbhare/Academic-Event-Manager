@@ -68,7 +68,7 @@ include ("connection.php");
         // Approve the selected activity
         $ename = $_POST['ename'];
         $_SESSION["activity"] = $ename;
-        $sql = "UPDATE `activity` SET `approval` = 'Approved by Principle' WHERE name = '$ename'";
+        $sql = "UPDATE `activity` SET `approval` = 'Approved by Principal' WHERE name = '$ename'";
         $res = $conn->query($sql);
 
         if ($res) {

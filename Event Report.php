@@ -28,7 +28,7 @@ $result = mysqli_query($conn, $sql);
 
         table {
             width: 100%;
-            border-collapse:collapse ;
+            border-collapse: collapse;
             margin: 20px auto;
             background-color: white;
         }
@@ -49,7 +49,17 @@ $result = mysqli_query($conn, $sql);
 
 <body>
 
-    <h1>Event Report</h1>
+    <center>
+        <h1>
+            <?php
+            if (mysqli_num_rows($result) > 0) {
+                echo 'Events Report';
+            } else {
+                echo 'No Events !';
+            }
+            ?>
+        </h1>
+    </center>
     <table>
         <thead>
             <tr>
@@ -68,8 +78,8 @@ $result = mysqli_query($conn, $sql);
                 echo "<tr>
                 <td>" . $row["name"] . "</td>
                 <td>" . $row["description"] . "</td>
-                <td>" . date("d-m-y",strtotime($row["datefrom"])). "</td>
-                <td>" . date("d-m-y",strtotime($row["dateto"])) . "</td>
+                <td>" . date("d-m-y", strtotime($row["datefrom"])) . "</td>
+                <td>" . date("d-m-y", strtotime($row["dateto"])) . "</td>
                 <td>" . $row["place"] . "</td>
                 <td>" . $row["time"] . "</td>
                 <td>" . $row["orgby"] . "</td>

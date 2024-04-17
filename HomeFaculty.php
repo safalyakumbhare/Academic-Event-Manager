@@ -84,6 +84,19 @@ include ("header.php");
         </div>
       </a>
     </button>
+    </button>
+    <button class="bttn">
+      <a href="Rejected Events.php">
+        <div class="box hover-box" id="new-faculty">
+          <div class="content">
+
+            <h2>Rejected Events</h2>
+            <p>View Rejected Events</p>
+
+          </div>
+        </div>
+      </a>
+    </button>
     
    
   </div>

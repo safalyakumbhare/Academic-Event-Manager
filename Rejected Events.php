@@ -4,7 +4,7 @@ include ("header.php");
 
 include ("connection.php");
 $current_date = date('Y-m-d');
-$sql = "SELECT * FROM `activity` WHERE `approval`='Approved by Principal' AND `datefrom` >= '$current_date' ORDER BY `datefrom`";
+$sql = "SELECT * FROM `activity` WHERE `approval`='Rejected by Principal' OR `approval`='Rejected by HOD' AND `datefrom` >= '$current_date' ORDER BY `datefrom`";
 $result = mysqli_query($conn, $sql);
 
 ?>
@@ -53,9 +53,9 @@ $result = mysqli_query($conn, $sql);
         <h1>
             <?php
             if (mysqli_num_rows($result) > 0) {
-                echo 'Events Approved By Principal';
+                echo 'Rejected  Events';
             } else {
-                echo 'No Events Approved !';
+                echo 'No Events Rejected !';
             }
             ?>
         </h1>
