@@ -27,7 +27,7 @@ $result = mysqli_query($conn, $sql);
         }
 
         table {
-            width: 98%;
+            width: 100%;
             border-collapse:collapse ;
             margin: 20px auto;
             background-color: white;
