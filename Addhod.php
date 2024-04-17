@@ -13,7 +13,7 @@ if (isset($_POST['send'])) {
 
     if ($result == 1) {
         echo "<script>alert('New Hod $name Added Successfully')</script>";
-        include ("HomeAdmin.php");
+        include ("showstaff.php");
 
     } else {
         echo "Error inserting data: " . mysqli_error($conn);

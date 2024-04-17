@@ -61,7 +61,7 @@ include ("header.php");
         <div class="box hover-box" id="new-faculty">
           <div class="content">
 
-            <h2>Show Staff</h2>
+            <h2>Report of HOD's and Faculties</h2>
             <p>Monitor Your Staff</p>
 
           </div>
@@ -75,6 +75,18 @@ include ("header.php");
 
             <h2>Upcoming Events</h2>
             <p>Monitor all the Upcoming Events</p>
+
+          </div>
+        </div>
+      </a>
+    </button>
+    <button class="bttn">
+      <a href="Event Report.php">
+        <div class="box hover-box" id="new-faculty">
+          <div class="content">
+
+            <h2>Event Report</h2>
+            <p>See all the Events Report in your Campus.</p>
 
           </div>
         </div>
