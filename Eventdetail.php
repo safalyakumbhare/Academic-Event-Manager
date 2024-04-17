@@ -21,7 +21,7 @@ include ("connection.php");
     $eventname = $des = $startdate = $enddate = $place = $time = $orgby = "";
     $ground_checked = $sportroom_checked = $audi_checked = $sound_checked = $photo_checked = $video_checked = "";
     $budget_res = null;
-    
+
     // Variable to store event name for the hidden input
     $ename = "";
 
@@ -57,7 +57,7 @@ include ("connection.php");
             $sound_checked = ($row_req['sound'] == 'YES') ? 'checked' : '';
             $photo_checked = ($row_req['photo'] == 'YES') ? 'checked' : '';
             $video_checked = ($row_req['video'] == 'YES') ? 'checked' : '';
-            
+
             $budget_query = "SELECT * FROM budget WHERE eventname = '$ename'";
             $budget_res = $conn->query($budget_query);
         } else {
@@ -76,7 +76,8 @@ include ("connection.php");
                 <label for="activity">Select Activity:</label>
                 <?php
                 // Display a dropdown with activities
-                $sql = "SELECT name FROM activity";
+                $current_date = date('Y-m-d');
+                $sql = "SELECT name FROM activity WHERE `datefrom` >= '$current_date'";
                 echo "<select name='activity' required>";
                 echo "<option value=''>Select</option>";
                 foreach ($conn->query($sql) as $row) {
@@ -91,7 +92,7 @@ include ("connection.php");
         <!-- Form to display and modify the selected activity -->
         <form method="POST">
             <!-- Hidden field to store the event name -->
-            
+
             <div class="form-group">
                 <label for="ename">Activity Name:</label>
                 <input type="text" id="ename" name="ename" readonly value="<?php echo htmlspecialchars($ename); ?>">
@@ -109,12 +110,14 @@ include ("connection.php");
 
             <div class="form-group">
                 <label for="startDate">Start Date:</label>
-                <input type="text" id="startDate" name="startDate" readonly value="<?php echo htmlspecialchars($startdate); ?>">
+                <input type="text" id="startDate" name="startDate" readonly
+                    value="<?php echo htmlspecialchars($startdate); ?>">
             </div>
 
             <div class="form-group">
                 <label for="endDate">End Date:</label>
-                <input type="text" id="endDate" name="endDate" readonly value="<?php echo htmlspecialchars($enddate); ?>">
+                <input type="text" id="endDate" name="endDate" readonly
+                    value="<?php echo htmlspecialchars($enddate); ?>">
             </div>
 
             <div class="form-group">
@@ -129,7 +132,8 @@ include ("connection.php");
 
             <div class="form-group">
                 <label for="organizer">Organized by:</label>
-                <input type="text" id="organizer" name="organizer" readonly value="<?php echo htmlspecialchars($orgby); ?>">
+                <input type="text" id="organizer" name="organizer" readonly
+                    value="<?php echo htmlspecialchars($orgby); ?>">
             </div>
 
             <label for="req">Requirements:</label>
@@ -198,7 +202,7 @@ include ("connection.php");
             </table>
 
 
-        
+
 
         </form>
     </div>

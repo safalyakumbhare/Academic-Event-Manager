@@ -60,6 +60,18 @@ include ("header.php");
         </div>
       </a>
     </button>
+    <button class="bttn">
+      <a href="Approved By Admin.php">
+        <div class="box hover-box" id="new-faculty">
+          <div class="content">
+
+            <h2>Events Approved By Principal</h2>
+            <p>View Events Approved By Principal</p>
+
+          </div>
+        </div>
+      </a>
+    </button>
     
    
   </div>
