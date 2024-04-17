@@ -1,8 +1,12 @@
 <?php
-include ("header.php");
-include ("connection.php");
+include("header.php");
+include("connection.php");
 
-$sql = "SELECT * FROM `activity` ORDER BY `datefrom`";
+// Get the current date in the format 'Y-m-d' (Year-Month-Day)
+$current_date = date('Y-m-d');
+
+// Modify the SQL query to select only events with a starting date greater than or equal to the current date
+$sql = "SELECT * FROM `activity` WHERE `datefrom` >= '$current_date' ORDER BY `datefrom`";
 $res = mysqli_query($conn, $sql);
 
 // Check if there are any events
@@ -114,11 +118,9 @@ $num_events = mysqli_num_rows($res);
                     echo '</div>';
                 }
             }
-
             ?>
         </div>
     </div>
-    <script src="script.js"></script>
 </body>
 
 </html>
