@@ -21,7 +21,7 @@ include ("connection.php");
     $eventname = $des = $startdate = $enddate = $place = $time = $orgby = "";
     $ground_checked = $sportroom_checked = $audi_checked = $sound_checked = $photo_checked = $video_checked = "";
     $budget_res = null;
-    
+
     // Variable to store event name for the hidden input
     $ename = "";
 
@@ -56,7 +56,7 @@ include ("connection.php");
             $sound_checked = ($row_req['sound'] == 'YES') ? 'checked' : '';
             $photo_checked = ($row_req['photo'] == 'YES') ? 'checked' : '';
             $video_checked = ($row_req['video'] == 'YES') ? 'checked' : '';
-            
+
             $budget_query = "SELECT * FROM budget WHERE eventname = '$ename'";
             $budget_res = $conn->query($budget_query);
         } else {
@@ -77,13 +77,13 @@ include ("connection.php");
             echo "<script>alert('Error in approving activity');</script>";
         }
     }
-    if(isset($_POST["reject"])){
-        if(isset($_POST["reject"])){
+    if (isset($_POST["reject"])) {
+        if (isset($_POST["reject"])) {
             $ename = $_POST['ename'];
             $_SESSION["activity"] = $ename;
             $sql = "UPDATE `activity` SET `approval` = 'Rejected By HOD' WHERE name = '$ename'";
             $res = $conn->query($sql);
-    
+
             if ($res) {
                 echo "<script>alert('Activity Rejected');</script>";
             } else {
@@ -104,7 +104,11 @@ include ("connection.php");
                 // Display a dropdown with activities
                 $sql = "SELECT name FROM activity WHERE approval='Pending'";
                 echo "<select name='activity' required>";
-                echo "<option value=''>Select</option>";
+                if (mysqli_num_rows(mysqli_query($conn, $sql)) == 0) {
+                    echo "<option value=''>No Events</option>";
+                } else {
+                    echo "<option value=''>Select</option>";
+                }
                 foreach ($conn->query($sql) as $row) {
                     echo "<option value='{$row['name']}'>{$row['name']}</option>";
                 }
@@ -126,12 +130,14 @@ include ("connection.php");
 
             <div class="form-group">
                 <label for="startDate">Start Date:</label>
-                <input type="text" id="startDate" name="startDate" readonly value="<?php echo htmlspecialchars($startdate); ?>">
+                <input type="text" id="startDate" name="startDate" readonly
+                    value="<?php echo htmlspecialchars($startdate); ?>">
             </div>
 
             <div class="form-group">
                 <label for="endDate">End Date:</label>
-                <input type="text" id="endDate" name="endDate" readonly value="<?php echo htmlspecialchars($enddate); ?>">
+                <input type="text" id="endDate" name="endDate" readonly
+                    value="<?php echo htmlspecialchars($enddate); ?>">
             </div>
 
             <div class="form-group">
@@ -146,7 +152,8 @@ include ("connection.php");
 
             <div class="form-group">
                 <label for="organizer">Organized by:</label>
-                <input type="text" id="organizer" name="organizer" readonly value="<?php echo htmlspecialchars($orgby); ?>">
+                <input type="text" id="organizer" name="organizer" readonly
+                    value="<?php echo htmlspecialchars($orgby); ?>">
             </div>
 
             <label for="req">Requirements:</label>
@@ -218,7 +225,7 @@ include ("connection.php");
                 <input type="submit" value="Approve" id="submit" name="approve" />
                 <input type="submit" value="Reject" id="rsubmit" name="reject" />
             </center>
-        
+
 
         </form>
     </div>
