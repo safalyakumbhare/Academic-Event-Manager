@@ -62,7 +62,7 @@ include ("header.php");
           <div class="content">
 
             <h2>Report of HOD's and Faculties</h2>
-            <p>Monitor Your Staff</p>
+            <p>View Staff's Department , username and password</p>
 
           </div>
         </div>
@@ -86,7 +86,7 @@ include ("header.php");
           <div class="content">
 
             <h2>Event Report</h2>
-            <p>See all the Events Report in your Campus.</p>
+            <p>View all the Events Report in your Campus.</p>
 
           </div>
         </div>
