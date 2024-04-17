@@ -4,7 +4,7 @@ include ("header.php");
 
 include ("connection.php");
 $current_date = date('Y-m-d');
-$sql = "SELECT * FROM `activity` WHERE `approval`='Approved by Principle' AND `datefrom` >= '$current_date' ORDER BY `datefrom`";
+$sql = "SELECT * FROM `activity` WHERE `approval`='Approved by HOD' AND `datefrom` >= '$current_date' ORDER BY `datefrom`";
 $result = mysqli_query($conn, $sql);
 
 ?>
@@ -49,33 +49,31 @@ $result = mysqli_query($conn, $sql);
 
 <body>
 
-    <center>
-        <h1>
-            <?php
-            if (mysqli_num_rows($result) > 0) {
-                echo 'Events Approved By Principal';
-            } else {
-                echo 'No Events Approved !';
-            }
-            ?>
-        </h1>
-    </center>
-    <table>
-        <thead>
-            <tr>
-                <th>Event Name</th>
-                <th>Event Description</th>
-                <th>Start Date</th>
-                <th>End Date</th>
-                <th>Place</th>
-                <th>Time</th>
-                <th>Department</th>
-                <th>Approval Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php while ($row = mysqli_fetch_assoc($result)) {
-                echo "<tr>
+   <center> <h1>
+        <?php
+        if (mysqli_num_rows($result) > 0) {
+            echo 'Events Approved By HOD';
+        } else {
+            echo 'No Events Approved !';
+        }
+        ?>
+    </h1></center>
+        <table>
+            <thead>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Event Description</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Place</th>
+                    <th>Time</th>
+                    <th>Department</th>
+                    <th>Approval Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php while ($row = mysqli_fetch_assoc($result)) {
+                    echo "<tr>
                 <td>" . $row["name"] . "</td>
                 <td>" . $row["description"] . "</td>
                 <td>" . date("d-m-y", strtotime($row["datefrom"])) . "</td>
@@ -85,9 +83,9 @@ $result = mysqli_query($conn, $sql);
                 <td>" . $row["orgby"] . "</td>
                 <td>" . $row["approval"] . "</td>
             </tr>";
-            } ?>
-        </tbody>
-    </table>
+                } ?>
+            </tbody>
+        </table>
 </body>
 
 </html>

@@ -72,6 +72,18 @@ include ("header.php");
         </div>
       </a>
     </button>
+    <button class="bttn">
+      <a href="Approved By HOD.php">
+        <div class="box hover-box" id="new-faculty">
+          <div class="content">
+
+            <h2>Events Approved By HOD</h2>
+            <p>View Events Approved By HOD</p>
+
+          </div>
+        </div>
+      </a>
+    </button>
     
    
   </div>
