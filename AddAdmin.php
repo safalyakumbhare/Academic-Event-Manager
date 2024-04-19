@@ -7,13 +7,13 @@ if (isset($_POST['send'])) {
     $password = $_POST['password'];
 
 
-    $sql = "INSERT INTO login VALUES ('Hod','$name','$dept','$username','$password')";
+    $sql = "INSERT INTO login VALUES ('Principal','$name','$dept','$username','$password')";
 
     $result = mysqli_query($conn, $sql);
 
     if ($result == 1) {
-        echo "<script>alert('New Hod $name Added Successfully')</script>";
-        include ("HomeAdmin.php");
+        echo "<script>alert('Welcome $name To Academic Event Manager as a Principal')</script>";
+        include("loginpage.php");
 
     } else {
         echo "Error inserting data: " . mysqli_error($conn);

@@ -114,7 +114,7 @@
           innovation and inclusivity. Our aim is to inspire, challenge, and empower individuals to embrace lifelong
           learning and make meaningful contributions to their communities and beyond</p>
       </div>
-    
+
     </section>
     <section class="services" id="services">
       <h2>Project Developers</h2>
@@ -173,13 +173,13 @@
 
       <div>
         <span>Copyright © 2024 All Rights Reserved</span>
-        <!-- <span class="link">
-          <a href="#home">Home</a>
-          <a href="#contact">Contact</a>
-        </span> -->
+        <span class="link">
+          <a href="Register Admin.php"><button class="admin-button">Register Admin</button></a>
+        </span>
       </div>
     </footer>
   </div>
+
   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
     integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
@@ -195,7 +195,7 @@
 
 
 
-  </script>.
+  </script>
 
 </body>
 
