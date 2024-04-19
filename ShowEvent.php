@@ -6,7 +6,7 @@ include("connection.php");
 $current_date = date('Y-m-d');
 
 // Modify the SQL query to select only events with a starting date greater than or equal to the current date
-$sql = "SELECT * FROM `activity` WHERE `datefrom` >= '$current_date' ORDER BY `datefrom`";
+$sql = "SELECT * FROM `activity` WHERE `datefrom` >= '$current_date' AND `approval`='Approved by Principal' ORDER BY `datefrom`";
 $res = mysqli_query($conn, $sql);
 
 // Check if there are any events

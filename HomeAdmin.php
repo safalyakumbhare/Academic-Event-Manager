@@ -86,7 +86,7 @@ include ("header.php");
           <div class="content">
 
             <h2>Event Report</h2>
-            <p>View all the Events Report in your Campus.</p>
+            <p>View all the Past and Current Events Report in your Campus.</p>
 
           </div>
         </div>

@@ -35,7 +35,7 @@ include ("header.php");
         </div>
       </a>
     </button>
-   
+
     <button class="bttn">
       <a href="ShowEvent.php">
         <div class="box hover-box" id="new-faculty">
@@ -43,6 +43,18 @@ include ("header.php");
 
             <h2>Upcoming Events</h2>
             <p>Monitor all the Upcoming Events</p>
+
+          </div>
+        </div>
+      </a>
+    </button>
+    <button class="bttn">
+      <a href="Approval Pending.php">
+        <div class="box hover-box" id="new-faculty">
+          <div class="content">
+
+            <h2>Approval Pending Events</h2>
+            <p>View Approval Pending Events</p>
 
           </div>
         </div>
@@ -97,8 +109,8 @@ include ("header.php");
         </div>
       </a>
     </button>
-    
-   
+
+
   </div>
 </body>
 

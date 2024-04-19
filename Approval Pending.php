@@ -4,7 +4,7 @@ include ("header.php");
 
 include ("connection.php");
 $current_date = date('Y-m-d');
-$sql = "SELECT * FROM `activity` WHERE `approval`='Approved by HOD' AND`datefrom` >= '$current_date' ORDER BY `datefrom`";
+$sql = "SELECT * FROM `activity` WHERE `approval`='Pending' AND`datefrom` >= '$current_date' ORDER BY `datefrom`";
 $result = mysqli_query($conn, $sql);
 
 ?>
@@ -14,7 +14,7 @@ $result = mysqli_query($conn, $sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events Approved By Principal</title>
+    <title>Approval Pending Events</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -52,9 +52,9 @@ $result = mysqli_query($conn, $sql);
    <center> <h1>
         <?php
         if (mysqli_num_rows($result) > 0) {
-            echo 'Events Approved By HOD';
+            echo 'Approval Pending Events';
         } else {
-            echo 'No Events Approved !';
+            echo 'No Events are Pending!';
         }
         ?>
     </h1></center>
