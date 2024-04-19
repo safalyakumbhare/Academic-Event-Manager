@@ -4,7 +4,7 @@ include ("header.php");
 
 include ("connection.php");
 $current_date = date('Y-m-d');
-$sql = "SELECT * FROM `activity` WHERE `approval`='Approved by HOD' AND `datefrom` >= '$current_date' ORDER BY `datefrom`";
+$sql = "SELECT * FROM `activity` WHERE `approval`='Approved by HOD' OR`approval`='Approved by Principal' AND`datefrom` >= '$current_date' ORDER BY `datefrom`";
 $result = mysqli_query($conn, $sql);
 
 ?>

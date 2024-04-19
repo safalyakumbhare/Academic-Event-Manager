@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,36 +31,10 @@
       </a>
     </section>
 
-    <section class="services" id="services">
-      <h2>Project Developers</h2>
 
-      <ul class="cards">
-        <li class="card">
-          <img src="image/bhu.jpg" alt="img">
-          <h3>Bhuvan Gajghat</h3>
-
-        </li>
-        <li class="card">
-          <img src="image/pravin.png" alt="img">
-          <h3>Pravin Paradkar</h3>
-
-        </li>
-        <li class="card">
-          <img src="image/safa.png" alt="img">
-          <h3>Safalya Kumbhare</h3>
-
-        </li>
-        <li class="card">
-          <img src="image/dha.png" alt="img">
-          <h3>Dhananjay Kawale</h3>
-
-        </li>
-
-      </ul>
-    </section>
 
     <section class="portfolio" id="portfolio">
-      <h2>Events in Academic</h2>
+      <h2>Events in Academic Event Manager</h2>
 
       <ul class="cards">
         <li class="card">
@@ -98,8 +71,29 @@
     </section>
 
     <section class="about" id="about">
-      <h2>Our Featuers</h2>
+      <h2>Our Key Features</h2>
       <p>Provide You the seamless Management of the event</p>
+      <div class="row company-info">
+        <h3 style="text-align:center;">Role-Based Access</h3>
+        <p>The system offers three distinct user roles—Principal (admin), Head of Department (HOD), and Faculty—to
+          ensure appropriate access and permissions for each stage of event planning and approval.</p>
+      </div>
+      <div class="row company-info">
+        <h3 style="text-align:center;">Event Proposal and Approval Workflow</h3>
+        <p> Faculty can propose event ideas, submit requirements, and provide budgets for HOD and Principal approval,
+          streamlining the event planning process.
+        </p>
+      </div>
+      <div class="row company-info">
+        <h3 style="text-align:center;">Security and Access Control</h3>
+        <p> Robust security measures ensure that sensitive event information is protected and access is granted only to
+          authorized users.
+        </p>
+      </div>
+    </section>
+    <section class="about" id="about">
+
+      <h2>About Us</h2>
       <div class="row company-info">
         <h3>Our Story</h3>
         <p> academic events are more than just gatherings they're milestones in our journey of knowledge and growth.
@@ -120,17 +114,35 @@
           innovation and inclusivity. Our aim is to inspire, challenge, and empower individuals to embrace lifelong
           learning and make meaningful contributions to their communities and beyond</p>
       </div>
-      <div class="row team">
-        <h3>Our Team</h3>
-        <ul>
-          <li>Bhuvan Gajghat - Frontend Developer</li>
-          <li>Pravin Paradkar - Frontend Developer</li>
-          <li>Safalya Kumbhare - Visual Effects and Backend Developer</li>
-          <li>Dhananjay Kawale</li>
-        </ul>
-      </div>
+    
     </section>
+    <section class="services" id="services">
+      <h2>Project Developers</h2>
 
+      <ul class="cards">
+        <li class="card">
+          <img src="image/bhu.jpg" alt="img">
+          <h3>Bhuvan Gajghat</h3>
+        <li class="card">
+          <img src="image/dha.png" alt="img">
+          <h3>Dhananjay Kawale</h3>
+
+        </li>
+        </li>
+        <li class="card">
+          <img src="image/pravin.png" alt="img">
+          <h3>Pravin Paradkar</h3>
+
+        </li>
+        <li class="card">
+          <img src="image/safa.png" alt="img">
+          <h3>Safalya Kumbhare</h3>
+
+        </li>
+
+
+      </ul>
+    </section>
     <section class="contact" id="contact">
       <h2>Contact Us</h2>
       <p>Reach out to us for any inquiries or feedback.</p>
@@ -180,24 +192,9 @@
       el: document.querySelector("#main"),
       smooth: true,
     });
-    let sections = document.querySelectorAll('section');
 
-    window.onscroll = () => {
-      sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
 
-        if (top >= offset && top < offset + height) {
-          sec.classList.add('show-animate');
-        }
-        // if want to use repeating animation on scroll, use this
-        else {
-          sec.classList.remove('show-animate');
 
-        }
-      })
-    }
   </script>.
 
 </body>
