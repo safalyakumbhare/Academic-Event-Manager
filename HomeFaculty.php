@@ -28,8 +28,8 @@ include ("header.php");
         <div class="box hover-box" id="new-faculty">
           <div class="content">
 
-            <h2>Propose New Activity</h2>
-            <p>Request New Activity</p>
+            <h2>Propose New Event</h2>
+            <p>Request New Event</p>
 
           </div>
         </div>
