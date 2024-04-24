@@ -1,7 +1,6 @@
 <?php
 include("connection.php");
 session_start();
-
 if (isset($_POST['sendact'])) {
     $actname = $_POST['activityName'];
     $actdes = $_POST['activitydes'];
@@ -36,9 +35,13 @@ if (isset($_POST['sendact'])) {
         }
     }
 
-    // If conflict is found, show alert and do not proceed
+    // If conflict is found, show modal popup and do not proceed
     if ($conflictFound) {
-        echo "<script>alert('One or more requirements are already booked for the given dates. Please choose different requirements or dates.');</script>";
+        echo "<script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.getElementById('myModal').style.display = 'block';
+                });
+            </script>";
         include("NewActivity.php");
     } else {
         // Proceed with inserting data into `activity` and `requirement` tables if no conflict
@@ -71,3 +74,70 @@ if (isset($_POST['sendact'])) {
     }
 }
 ?>
+
+<!-- HTML for Modal Popup -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>The requirement is Engaged in another Event, choose another date or requirement.</p>
+    </div>
+</div>
+
+<!-- CSS for Modal Popup -->
+<style>
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: aliceblue;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        border-radius: 10px;
+        width: 80%; /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+    // Close the modal when clicking on the close button or outside the modal
+    document.addEventListener('DOMContentLoaded', function() {
+        var modal = document.getElementById('myModal');
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    });
+</script>
