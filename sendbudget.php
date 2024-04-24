@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST['sendgross'])) {
-    include("HomeFaculty.php");
+    header("Location:HomeFaculty.php");
     //Calculate the gross total
     // $gross_total = $_POST['gross_total'];
 

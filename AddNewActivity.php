@@ -61,7 +61,7 @@ if (isset($_POST['sendact'])) {
 
             if ($result_requirement == 1) {
                 echo "<script>alert('Activity Recorded. Now Go to Budget Section');</script>";
-                include("budget.php");
+                header("Location:budget.php");
             } else {
                 echo "Error inserting data into 'requirement' table: " . mysqli_error($conn);
             }

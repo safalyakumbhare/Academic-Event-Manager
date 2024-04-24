@@ -51,7 +51,7 @@ if (isset($_POST['sendbudget'])) {
 <body>
     <div class="container">
         <h2>Budget Section</h2>
-        <form id="activityForm" action="budget.php" method="POST">
+        <form id="activityForm" method="POST">
             <div class="form-group">
                 <label for="particular">Particular:</label>
                 <input type="text" id="particular" name="particular" required />
