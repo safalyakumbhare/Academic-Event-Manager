@@ -1,5 +1,18 @@
 <?php
 include ("header.php");
+include ("connection.php");
+$current_date = date('Y-m-d');
+$pending = mysqli_query($conn, "SELECT * FROM `activity` WHERE `datefrom` >= '$current_date' AND  `approval`='Pending' ");
+$pendcount = mysqli_num_rows($pending);
+
+$hod = mysqli_query($conn, "SELECT * FROM `activity` WHERE `datefrom` >= '$current_date' AND  `approval`='Approved by HOD' ");
+$hodcount = mysqli_num_rows($hod);
+
+$pr = mysqli_query($conn, "SELECT * FROM `activity` WHERE `datefrom` >= '$current_date' AND  `approval`='Approved by Principal' ");
+$prcount = mysqli_num_rows($pr);
+
+$rjt = mysqli_query($conn, "SELECT * FROM `activity` WHERE `datefrom` >= '$current_date' AND (`approval`='Rejected by Principal' OR `approval`='Rejected By HOD')");
+$rjtcount = mysqli_num_rows($rjt);
 
 ?>
 <!DOCTYPE html>
@@ -53,7 +66,7 @@ include ("header.php");
         <div class="box hover-box" id="new-faculty">
           <div class="content">
 
-            <h2>Approval Pending Events</h2>
+            <h2>Approval Pending : <?php echo $pendcount ?> </h2>
             <p>View Approval Pending Events</p>
 
           </div>
@@ -77,7 +90,7 @@ include ("header.php");
         <div class="box hover-box" id="new-faculty">
           <div class="content">
 
-            <h2>Events Approved By Principal</h2>
+            <h2>Approved By Principal : <?php echo $prcount ?></h2>
             <p>View Events Approved By Principal</p>
 
           </div>
@@ -89,7 +102,7 @@ include ("header.php");
         <div class="box hover-box" id="new-faculty">
           <div class="content">
 
-            <h2>Events Approved By HOD</h2>
+            <h2>Approved By HOD : <?php echo $hodcount?></h2>
             <p>View Events Approved By HOD</p>
 
           </div>
@@ -102,7 +115,7 @@ include ("header.php");
         <div class="box hover-box" id="new-faculty">
           <div class="content">
 
-            <h2>Rejected Events</h2>
+            <h2>Rejected : <?php echo $rjtcount?></h2>
             <p>View Rejected Events</p>
 
           </div>
