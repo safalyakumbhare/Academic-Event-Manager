@@ -20,7 +20,7 @@ CREATE TABLE  IF NOT EXISTS `activity` (
     `place` VARCHAR(30),
     `time` TIME,
     `orgby` VARCHAR(30),
-    `approval` VARCHAR(10),
+    `approval` VARCHAR(50),
     
 );
 
