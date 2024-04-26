@@ -22,10 +22,10 @@
 
     <section class="homepage" id="home">
       <video autoplay loop muted src="event.mp4"></video>
-      <a href="loginpage.php">
+      <a href="Register Admin.php">
         <div class="buttons">
           <button class="btn"><span></span>
-            <p data-start="good luck!" data-text="Now!" data-title="Get Started"></p>
+            <p data-start="good luck!" data-text="Now!" data-title="Get Register"></p>
           </button>
         </div>
       </a>
@@ -174,7 +174,7 @@
       <div>
         <span>Copyright © 2024 All Rights Reserved</span>
         <span class="link">
-          <a href="Register Admin.php"><button class="admin-button">Register Admin</button></a>
+          <a href="loginpage.php"><button class="admin-button">Login</button></a>
         </span>
       </div>
     </footer>
