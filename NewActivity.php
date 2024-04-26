@@ -41,7 +41,17 @@ include ("header.php");
             </div>
             <div class="form-group">
                 <label for="organizer">Organized by:</label>
-                <input type="text" id="organizer" name="organizer" required />
+                <?php
+                // Display a dropdown with activities
+                
+                $sql = "SELECT dept FROM login WHERE `desig`='Hod'";
+                echo "<select name='organizer' required>";
+                echo "<option value=''>Select</option>";
+                foreach ($conn->query($sql) as $row) {
+                    echo "<option value='{$row['dept']}'>{$row['dept']}</option>";
+                }
+                echo "</select>";
+                ?>
             </div>
             <label for="req">Requirements : </label>
             <div class="checkbox-group">
