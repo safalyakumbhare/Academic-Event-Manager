@@ -22,8 +22,9 @@ if (isset($_POST['change'])) {
             $update_result = mysqli_query($conn, $update_sql);
 
             if ($update_result) {
-                echo "<script>alert('Password Changed');</script>";
-                include("loginpage.php");
+                echo "<script>alert('Password Changed');
+                window.location.href='Loginpage.php';</script>";
+                // include("loginpage.php");
             } else {
                 echo "<script>alert('Error in updating password');</script>";
             }

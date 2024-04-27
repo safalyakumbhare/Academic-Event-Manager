@@ -1,6 +1,8 @@
 <?php
 if (isset($_POST['sendgross'])) {
-    header("Location:HomeFaculty.php");
+    echo "<script>alert('Budget Submited');
+    window.location.href='HomeFaculty.php';</script>
+    ";
     //Calculate the gross total
     // $gross_total = $_POST['gross_total'];
 

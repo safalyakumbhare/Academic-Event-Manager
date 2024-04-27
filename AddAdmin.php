@@ -12,8 +12,9 @@ if (isset($_POST['send'])) {
     $result = mysqli_query($conn, $sql);
 
     if ($result == 1) {
-        echo "<script>alert('Welcome $name To Academic Event Manager as a Principal')</script>";
-        include("loginpage.php");
+        echo "<script>alert('Welcome $name To Academic Event Manager as a Principal');
+        window.location.href='Loginpage.php';</script>";
+        // include("loginpage.php");
 
     } else {
         echo "Error inserting data: " . mysqli_error($conn);

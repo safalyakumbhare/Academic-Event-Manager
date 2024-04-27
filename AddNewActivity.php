@@ -63,8 +63,9 @@ if (isset($_POST['sendact'])) {
             $result_requirement = mysqli_query($conn, $sql_requirement);
 
             if ($result_requirement == 1) {
-                echo "<script>alert('Activity Recorded. Now Go to Budget Section');</script>";
-                header("Location:budget.php");
+                echo "<script>alert('Activity Recorded. Now Go to Budget Section');
+                window.location.href='budget.php';</script>";
+                // header("Location:budget.php");
             } else {
                 echo "Error inserting data into 'requirement' table: " . mysqli_error($conn);
             }

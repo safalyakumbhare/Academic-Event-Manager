@@ -12,8 +12,9 @@ if (isset($_POST['send'])) {
     $result = mysqli_query($conn, $sql);
 
     if ($result == 1) {
-        echo "<script>alert('New Hod $name Added Successfully')</script>";
-        include ("HomeAdmin.php");
+        echo "<script>alert('New Hod $name Added Successfully'); window.location.href='HomeAdmin.php';</script>
+       ";
+        // include ("HomeAdmin.php");
 
     } else {
         echo "Error inserting data: " . mysqli_error($conn);
