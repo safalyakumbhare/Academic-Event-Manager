@@ -1,6 +1,12 @@
 <?php
 include ("header.php");
+$current_date = date('Y-m-d');
+$sql = "SELECT name FROM `activity` WHERE `datefrom` = '$current_date' AND `approval`='Approved by Principal'";
+$res = mysqli_query($conn, $sql);
 
+// Check if there are any events
+$num_events = mysqli_num_rows($res);
+$data = mysqli_fetch_assoc($res);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +20,18 @@ include ("header.php");
 </head>
 
 <body>
+<center>
+      <h1>
+        <?php
+        if ($num_events > 0) {
+          echo '<img id="img" src="image/image1.png">Event Today : '. htmlspecialchars($data['name'], ENT_QUOTES, 'UTF-8').'<img id="img" src="image/image1.png">';
 
+        } else {
+          echo 'No Events Today';
+        }
+        ?>
+      </h1>
+    </center>
   <div class="container">
 
     <button class="bttn">
