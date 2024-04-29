@@ -13,7 +13,7 @@ if (isset ($_POST['send'])) {
 
     if ($result == 1) {
         echo "<script>alert('New Faculty $name Added Successfully');
-        window.location.href='HomeAdmin.php';</script>";
+        window.location.href='staffreport.php';</script>";
         // include ("HomeAdmin.php");
 
     } else {

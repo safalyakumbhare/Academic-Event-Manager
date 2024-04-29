@@ -12,7 +12,7 @@ if (isset($_POST['send'])) {
     $result = mysqli_query($conn, $sql);
 
     if ($result == 1) {
-        echo "<script>alert('New Hod $name Added Successfully'); window.location.href='HomeAdmin.php';</script>
+        echo "<script>alert('New Hod $name Added Successfully'); window.location.href='staffreport.php';</script>
        ";
         // include ("HomeAdmin.php");
 
