@@ -7,13 +7,13 @@ include ("header.php");
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Activity Proposal Form</title>
+    <title>Event Proposal Form</title>
     <link rel="stylesheet" href="NewActivity.css">
 </head>
 
 <body>
     <div class="container">
-        <h2>Activity Proposal Form</h2>
+        <h2>Event Proposal Form</h2>
         <form id="activityForm" action="AddNewActivity.php" method="POST">
             <div class="form-group">
                 <label for="activityName">Name of Activity:</label>

@@ -22,10 +22,10 @@
 
     <section class="homepage" id="home">
       <video autoplay loop muted src="event.mp4"></video>
-      <a href="Register Admin.php">
+      <a href="loginpage.php">
         <div class="buttons">
           <button class="btn"><span></span>
-            <p data-start="good luck!" data-text="Now!" data-title="Get Register"></p>
+            <p data-start="good luck!" data-text="Now!" data-title="Get Started"></p>
           </button>
         </div>
       </a>
