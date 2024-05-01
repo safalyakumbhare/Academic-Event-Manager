@@ -1,5 +1,6 @@
 <?php
 include ("header.php");
+
 include ("connection.php");
 ?>
 
@@ -102,7 +103,7 @@ include ("connection.php");
                 <label for="activity">Select Activity:</label>
                 <?php
                 // Display a dropdown with activities
-                $sql = "SELECT name FROM activity WHERE approval='Pending'";
+                $sql = "SELECT name FROM activity WHERE approval='Pending' ";
                 echo "<select name='activity' required>";
                 if (mysqli_num_rows(mysqli_query($conn, $sql)) == 0) {
                     echo "<option value=''>No Events</option>";
@@ -219,6 +220,12 @@ include ("connection.php");
                     }
                     ?>
                 </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4"><strong>Total:</strong></td>
+                        <td><strong><?php echo number_format($gross_total, 2); ?></strong></td>
+                    </tr>
+                </tfoot>
             </table>
 
             <center>

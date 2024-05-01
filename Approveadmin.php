@@ -217,6 +217,12 @@ include ("connection.php");
                     }
                     ?>
                 </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4"><strong>Total:</strong></td>
+                        <td><strong><?php echo number_format($gross_total, 2); ?></strong></td>
+                    </tr>
+                </tfoot>
             </table>
 
             <center>
