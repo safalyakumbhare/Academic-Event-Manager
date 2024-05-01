@@ -1,7 +1,6 @@
 <?php
 include ("connection.php")
-
-    ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,27 +36,19 @@ include ("connection.php")
                         <!-- Unicode character for eye icon -->
                     </div>
                 </div>
-
                 <div class="btn-group">
                     <button type="submit" class="btn login" id="btn" name="submit">Login</button>
                     <button type="reset" class="btn reset" name="reset" id="btn">Reset</button>
-
                 </div>
             </form>
         </div>
     </div>
-
-
     <script>
         const togglePassword = document.querySelector('#togglePassword');
         const password = document.querySelector('#pass');
-
         togglePassword.addEventListener('click', function () {
-            // Toggle between password and text input type
             const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
             password.setAttribute('type', type);
-
-            // Optionally, change the icon based on visibility state (e.g., eye-open and eye-closed)
             togglePassword.textContent = type === 'password' ? '👁️' : '👁️‍🗨️';
         });
     </script>

@@ -16,25 +16,19 @@ include ("connection.php");
 
 <body>
     <?php
-
-    // Initialize variables
     $eventname = $des = $startdate = $enddate = $place = $time = $orgby = "";
     $ground_checked = $sportroom_checked = $audi_checked = $sound_checked = $photo_checked = $video_checked = "";
     $budget_res = null;
 
-    // Variable to store event name for the hidden input
     $ename = "";
 
     if (isset($_POST['show'])) {
-        // Retrieve the selected event
         $ename = $_POST['activity'];
 
-        // Fetch activity data
         $query_event = "SELECT * FROM activity WHERE name = '$ename'";
         $result_event = $conn->query($query_event);
 
         if ($result_event && $row_event = $result_event->fetch_assoc()) {
-            // Set the activity data
             $eventname = $row_event['name'];
             $des = $row_event['description'];
             $startdate = date("d-m-Y", strtotime($row_event['datefrom']));
@@ -44,12 +38,10 @@ include ("connection.php");
             $orgby = $row_event['orgby'];
         }
 
-        // Fetch requirement data
         $query_req = "SELECT * FROM requirement WHERE eventname = '$ename'";
         $result_req = $conn->query($query_req);
 
         if ($result_req && $row_req = $result_req->fetch_assoc()) {
-            // Set checkbox states based on requirement data
             $ground_checked = ($row_req['ground'] == 'YES') ? 'checked' : '';
             $sportroom_checked = ($row_req['sport'] == 'YES') ? 'checked' : '';
             $audi_checked = ($row_req['auditorium'] == 'YES') ? 'checked' : '';
@@ -65,7 +57,6 @@ include ("connection.php");
     }
 
     if (isset($_POST['approve'])) {
-        // Approve the selected activity
         $ename = $_POST['ename'];
         $_SESSION["activity"] = $ename;
         $sql = "UPDATE `activity` SET `approval` = 'Approved by Principal' WHERE name = '$ename'";
@@ -94,12 +85,10 @@ include ("connection.php");
     <div class="container">
         <h2>Principal Approval Form</h2>
 
-        <!-- Form to select an activity -->
         <form method="POST">
             <div class="form-group">
                 <label for="activity">Select Event:</label>
                 <?php
-                // Display a dropdown with activities
                 $sql = "SELECT name FROM activity WHERE approval='Approved by HOD'";
                 echo "<select name='activity' required>";
                 if (mysqli_num_rows(mysqli_query($conn, $sql)) == 0) {
@@ -116,9 +105,7 @@ include ("connection.php");
             </div>
         </form>
 
-        <!-- Form to display and modify the selected activity -->
         <form method="POST">
-            <!-- Hidden field to store the event name -->
             <input type="hidden" name="ename" value="<?php echo htmlspecialchars($ename); ?>">
 
             <div class="form-group">

@@ -16,11 +16,11 @@ include ("header.php");
         <h2>Event Proposal Form</h2>
         <form id="activityForm" action="AddNewActivity.php" method="POST">
             <div class="form-group">
-                <label for="activityName">Name of Activity:</label>
+                <label for="activityName">Name of Event:</label>
                 <input type="text" id="activityName" name="activityName" required />
             </div>
             <div class="form-group">
-                <label for="activityName">Activity Description :</label>
+                <label for="activityName">Event Description :</label>
                 <textarea id="activitydes" name="activitydes" required></textarea>
             </div>
             <div class="form-group">
