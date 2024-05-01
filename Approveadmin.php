@@ -97,7 +97,7 @@ include ("connection.php");
         <!-- Form to select an activity -->
         <form method="POST">
             <div class="form-group">
-                <label for="activity">Select Activity:</label>
+                <label for="activity">Select Event:</label>
                 <?php
                 // Display a dropdown with activities
                 $sql = "SELECT name FROM activity WHERE approval='Approved by HOD'";
@@ -105,7 +105,7 @@ include ("connection.php");
                 if (mysqli_num_rows(mysqli_query($conn, $sql)) == 0) {
                     echo "<option value=''>No Events</option>";
                 } else {
-                    echo "<option value=''>Select</option>";
+                    echo "<option value=''>Select the events</option>";
                 }
                 foreach ($conn->query($sql) as $row) {
                     echo "<option value='{$row['name']}'>{$row['name']}</option>";
