@@ -73,7 +73,7 @@ include ("connection.php");
         $res = $conn->query($sql);
 
         if ($res) {
-            echo "<script>alert('Activity Approved');</script>";
+            echo "<script>alert('Activity Approved By HOD');</script>";
         } else {
             echo "<script>alert('Error in approving activity');</script>";
         }
@@ -86,7 +86,7 @@ include ("connection.php");
             $res = $conn->query($sql);
 
             if ($res) {
-                echo "<script>alert('Activity Rejected');</script>";
+                echo "<script>alert('Activity Rejected By HOD');</script>";
             } else {
                 echo "<script>alert('Error in rejecting activity');</script>";
             }

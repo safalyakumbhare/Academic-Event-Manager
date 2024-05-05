@@ -63,7 +63,7 @@ include ("connection.php");
         $res = $conn->query($sql);
 
         if ($res) {
-            echo "<script>alert('Activity Approved');</script>";
+            echo "<script>alert('Activity Approved By Principal');</script>";
         } else {
             echo "<script>alert('Error in approving activity');</script>";
         }
