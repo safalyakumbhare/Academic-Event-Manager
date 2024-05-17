@@ -89,7 +89,10 @@ include ("connection.php");
             <div class="form-group">
                 <label for="activity">Select Event:</label>
                 <?php
-                $sql = "SELECT name FROM activity WHERE approval='Approved by HOD'";
+                $current_date = date("Y-m-d");
+
+                // Display a dropdown with activities
+                $sql = "SELECT name FROM activity WHERE `datefrom` >= '$current_date' AND approval = 'Approved by HOD'";
                 echo "<select name='activity' required>";
                 if (mysqli_num_rows(mysqli_query($conn, $sql)) == 0) {
                     echo "<option value=''>No Events</option>";
