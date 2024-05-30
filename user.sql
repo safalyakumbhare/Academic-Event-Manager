@@ -20,8 +20,7 @@ CREATE TABLE  IF NOT EXISTS `activity` (
     `place` VARCHAR(30),
     `time` TIME,
     `orgby` VARCHAR(30),
-    `approval` VARCHAR(50),
-    
+    `approval` VARCHAR(50)
 );
 
 CREATE TABLE IF NOT EXISTS `requirement`(
@@ -43,9 +42,4 @@ CREATE TABLE IF NOT EXISTS `budget`(
     `amount` DECIMAL,
     `qty`  INT,
     `total` DECIMAL
-);
-
-CREATE TABLE IN NOT EXISTS `hodapprove`(
-    `eventname` VARCHAR(30),
-    `revise` VARCHAR(50)
 );
