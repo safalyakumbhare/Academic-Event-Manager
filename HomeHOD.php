@@ -4,7 +4,8 @@ $current_date = date('Y-m-d');
 $sql = "SELECT name FROM `activity` WHERE `datefrom` = '$current_date' AND `approval`='Approved by Principal'";
 $res = mysqli_query($conn, $sql);
 
-// Check if there are any events
+$pending = mysqli_query($conn, "SELECT * FROM `activity` WHERE `datefrom` >= '$current_date' AND  `approval`='Pending' ");
+$pendcount = mysqli_num_rows($pending);
 $num_events = mysqli_num_rows($res);
 $data = mysqli_fetch_assoc($res);
 ?>
@@ -51,8 +52,8 @@ $data = mysqli_fetch_assoc($res);
         <div class="box hover-box" id="new-faculty">
           <div class="content">
 
-            <h2>Approve Events</h2>
-            <p>Show Approval Status and Upcoming Events</p>
+            <h2>Approve Events : <?php echo $pendcount;?></h2>
+            <p>Approve the Events</p>
 
           </div>
         </div>
